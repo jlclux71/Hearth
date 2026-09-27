@@ -15,462 +15,165 @@ History begins at 1.5.0. For releases before 1.5.0, see the
 
 ### Added
 
-- **The Expressive design for the rest of the cards.** The Material 3
-  Expressive look the weather and market cards introduced now reaches every
-  card whose content Hearth draws itself: clock, mini and full calendar, tasks
-  (list and Kanban), statistics, activity heatmap, links, commands, new note,
-  favourites, bookmarks, recent files, folder, query, search bar, calculator,
-  Git, RSS, Jira and Operon. Rows become a grouped list of tonal containers with
-  their icons on round badges, tiles and keys become soft tonal shapes that
-  firm up their corners under the pointer, controls become pills and connected
-  button groups, and each card's headline is set heavy — the time, the
-  calculator's answer, the statistics — or on a cookie: today in the mini
-  calendar, the analogue clock's face. Everything takes tonal steps of your
-  accent colour, in light and dark themes.
+- **Material 3 Expressive: a second design for all of Hearth.** A new
+  **Design** setting — *Classic* or *Expressive* — heads **Settings → Hearth →
+  Appearance**, shown as a small card drawn each way. Expressive redraws
+  everything Hearth draws in tonal steps of your accent colour, in light and
+  dark themes:
 
-  It cascades vault → board → card: **Settings → Hearth → Appearance →
-  Design** sets it for the whole vault, *Dashboard settings →
-  Style → Design* for one board, and each card's *Style* tab can follow
-  that or choose *Classic* or *Expressive* for itself. The weather and market
-  cards follow the default too until they're told otherwise (moon and daylight
-  stay Expressive). A shared or published board carries its card design.
-  The search row at the top of the board follows the board's card design as
-  well: a pill of a field and button, round filter chips, and a tonal results
-  sheet — as does the search-bar card's own chips and results.
-  The dialogs such a card opens follow it — a task and its filter and sort, an
-  event, the folder browser, the full forecast (with the flat weather
-  drawings), an instrument's chart, a confirmation: a tonal surface with large
-  corners, pill buttons, filled fields and the card's own rows and chips. Cards showing
-  your own content — notes, embeds, web pages, Dataview and Datacore, the pets —
-  are left as they are, and no card's frame changes.
+  - **Cards** — rows become grouped tonal lists with icons on round badges,
+    tiles and keys soft shapes, controls pills and connected button groups, and
+    each card's headline is set heavy or on a cookie shape (today in the mini
+    calendar, the analogue clock's face). Every view of both calendars follows,
+    week and day lanes and agendas included.
+  - **The weather card** — flat weather drawings (the big one on a turning
+    cookie), metric chips, hourly pills and thick range bars. The weather
+    drawings and the sky keep the weather's own colours.
+  - **Everything around the cards** — the board's search row, toolbar,
+    dashboard switcher and card buttons, every dialog, picker and menu Hearth
+    opens (menus grouped, destructive entries marked), and Hearth's settings
+    pane. Obsidian's own interface and other plugins' are left to your theme.
 
-- **Expressive for all of Hearth.** With the vault's design on Expressive, the
-  look reaches past the cards to everything else Hearth draws: every dialog and
-  picker (tonal surfaces, pill buttons and fields, Material's wide switches and
-  slim-handled sliders, pill tab ribbons), every menu Hearth opens, the board's
-  toolbar, dashboard switcher and card buttons, and Hearth's own settings pane.
-  Obsidian's own interface and other plugins' are left to your theme.
+  The choice cascades vault → board → card: *Dashboard settings → Style →
+  Design* sets one board, and a card's *Style* tab can follow that or pick its
+  own. A dialog or menu takes the design of whatever opened it. Cards showing
+  your own content — notes, embeds, web pages, Dataview and Datacore, the
+  pets — and every card's frame stay as they are. A shared or published board
+  carries its designs.
 
-  The cascade stays the same: a card's design, else its board's, else the
-  vault's. A dialog or menu takes the design of whatever it was opened from —
-  so a Classic card or board keeps its dialogs Classic inside an Expressive
-  vault, and a confirmation opened from a dialog matches that dialog — and
-  anything opened from elsewhere (the command palette, the ribbon) follows the
-  vault. The setting is now called **Design** and heads *Settings → Hearth →
-  Appearance*, where the two choices are shown as a small card drawn each way;
-  the board's own is in *Dashboard settings → Style*.
+- **A Markets card: stocks, funds, forex and crypto.** Type or search a symbol
+  — `AAPL`, `0700.HK`, `510300`, `EUR/USD`, `BTC-USD`, `fund:161725` — and the
+  card finds where it trades across Yahoo Finance, Tencent, Eastmoney,
+  CoinGecko and the ECB. All are free and key-less; an instrument more than one
+  source carries falls back to the next when one fails, so a mainland board
+  keeps working where Yahoo can't be reached.
 
-  Hearth's menus are grouped the Expressive way: a board's menu, for one, keeps
-  the board, moving it in and out, and deleting it as three separate groups,
-  and the destructive entry (delete, discard) is marked as such.
+  Eight styles — *Minimal*, *Spotlight*, *Chart*, *Watchlist*, *Tiles*,
+  *Ticker tape*, *Portfolio* (holdings, total in one currency, gains and an
+  allocation bar) and *Lookup* — each Classic or Expressive. Rises are green or
+  red by your language's convention. Clicking an instrument opens a chart over
+  any range with its stats and your position. Publishing a board strips a
+  portfolio's units and costs; the symbols travel (#337).
 
-- **A livelier Ko-fi button.** The tip button (About, *What's new*, the add-card
-  picker) is now a filled pill in Ko-fi's red with the cup on a white badge,
-  and the cup gives a little wobble under the pointer unless you've asked your
-  system for less motion.
+- **Moon and Daylight weather styles.** *Moon* draws tonight's moon in its real
+  phase on a turning cookie, with its name, how much is lit, where tonight sits
+  in the lunar month, the next full and new moon, and moonrise and moonset; a
+  *Clean* layout keeps just the moon and the slider. *Daylight* walks the sun
+  along an arc from sunrise to sunset, minute by minute, with the next sunset
+  (or sunrise) and the day's length. Neither makes an extra request, and the
+  full forecast now lists the moon's phase too (#338).
 
-- **Choose Classic or Expressive in setup.** The setup wizard's *Look* step
-  opens with the design, and the wizard redraws itself in the one you pick. The
-  first setup makes it the vault's design and the drawn background's (so
-  Expressive gets Hearth's wallpaper in its Expressive shapes); running setup
-  again later puts the choice on the new board only.
+- **Five new clock faces.** *Stacked*, *Flip* and *Rings* come in both
+  designs; Expressive adds *Shapes* (every digit on a shape of its own) and
+  *Orbit* (the hour on a scalloped face, the minute a dot circling it). A
+  Classic card set to one of those draws Stacked or Analog instead. The new
+  faces size themselves to the card and drop seconds and animation on the
+  Reduced and Minimal performance tiers.
 
-- **A harbour town background.** A new *Harbour town* background: houses
-  stepping down a hill to the quay, a lighthouse at the end of the pier and
-  sailing boats on the bay, drawn — not downloaded — from Material 3
-  Expressive's soft shapes in tonal steps of your accent colour. By day in a
-  light theme; at night in a dark one, with lit windows, the lamp burning and
-  stars out. Offered in settings, per board, and in the setup wizard.
+- **Backgrounds drawn by Hearth.** *Hearth default* used to be a 1.5 MB photo
+  fetched from GitHub, and so vanished with *Disable external calls* on. It is
+  now drawn by the plugin: **Classic** is hills with a cabin and pines — a
+  morning in a light theme, a moonlit night in a dark one — and **Expressive**
+  gathers Material's soft shapes in the corners in your accent colour. A new
+  **Harbour town** background joins it: houses stepping down to a quay, a
+  lighthouse and sailing boats, by day or by lamp-lit night with the theme.
+  The live weather sky gains an Expressive look too: a flat illustrated sky
+  with rolling hills, bubbly clouds and pill raindrops.
 
-- **Five new clock faces.** The Clock card's *Style* gains **Stacked** (hours
-  over minutes, large), **Flip** (split tiles that turn over as the number
-  changes), and **Rings** (minutes, hours and seconds as progress rings round
-  the time) — each with a Classic and an Expressive look: tonal blocks and
-  tiles in the accent and its complementary tone, and Material's wavy progress
-  for the rings. The Expressive design adds two faces of its own: **Shapes**,
-  every digit on a shape of its own (a clover, a cookie, a flower, a squircle),
-  and **Orbit**, the hour big on a scalloped face with the minute as a dot
-  circling its edge. A Classic card with one of those chosen draws Stacked or
-  Analog in its place. The newer faces size themselves to the card, and on the
-  Reduced and Minimal performance tiers they drop their seconds and animation.
+  The background's *Design* sits under **Settings → Hearth → Appearance →
+  Background**, and a board can override it. A new vault starts the drawn
+  wallpaper at opacity 0.8 with no blur; switching between it and a photo
+  moves those between 0.8/0 and 0.35/2. Values you've already saved are kept.
 
-- **A Markets card: stocks, funds, forex and crypto.** (#337) Type or search a
-  symbol — `AAPL`, `0700.HK`, `510300`, `EUR/USD`, `BTC-USD`, `fund:161725` —
-  and the card finds where it trades, across Yahoo Finance (most of the world's
-  exchanges, forex, crypto, futures), Tencent (Shanghai, Shenzhen, Beijing and
-  Hong Kong, on-exchange funds included), Eastmoney (Chinese off-exchange
-  funds, valued through the day), CoinGecko and the ECB. All are free and
-  key-less; none is an official API, so every instrument more than one source
-  carries falls back to the next when one fails, and the card remembers which
-  answered — a mainland board keeps working where Yahoo can't be reached.
+- **A Folder card.** Lists what sits one level inside a folder — subfolders
+  and files, as rows or tiles — in the same order as the file explorer,
+  including a custom order from a plugin such as
+  [Flexplorer](https://github.com/kh4f/flexplorer); name, modified and created
+  orders are offered too. Clicking a file opens it; a subfolder opens a folder
+  browser you can walk the whole tree in (Ctrl/Cmd-click keeps it open while
+  opening notes), or, with *Opening a subfolder* set to *In the card*, walks
+  the card itself into it (#329).
 
-  Eight styles: **Minimal**, **Spotlight** (price, a chart with a 1D–5Y range
-  switcher, the day's and 52-week range, stats; a switcher when it follows
-  several), **Chart** edge to edge, **Watchlist** with sparklines, **Tiles**,
-  **Ticker tape**, **Portfolio** (units and average cost per holding, the total
-  in one currency at ECB rates, today's and overall gain, an allocation bar) and
-  **Lookup**, a search field on the card that adds a result with one click. Each
-  comes in **Classic** or **Material 3 Expressive**, the weather card's two,
-  and rises are green or red — automatic follows Obsidian's language, red-up
-  for Chinese, Japanese and Korean. Clicking an instrument opens a chart over
-  any range with a crosshair, its stats, your position and a link to its page.
-  Quotes are shared across every card and board, and a closed market is checked
-  at most every half hour. Publishing a board strips a portfolio's units and
-  costs along with the other private details; the symbols travel.
+- **A card for the Vault Pet plugin.** Shows
+  [Vault Pet](https://github.com/elliott-json-park/obsidian-vault-pet)'s pet
+  card or its whole pet house on the board, drawn by the plugin itself — so
+  the pet animates and can be petted, and Hearth keeps no copy of its data.
+  Find it in the "Add card" picker's Fun section. Hearth's own *Pet* card is
+  unchanged.
 
-- **An Expressive design for the weather card and the weather background.**
-  The weather card's new *Design* setting chooses **Classic** — as before — or
-  **Expressive**, which redraws every style in the Material 3 Expressive manner
-  of the Moon and Daylight styles: flat weather drawings in place of line icons
-  (the big one set on a turning cookie shape), feels-like, high / low and the
-  metrics as chips, the hourly strip as pills with the current hour in the
-  accent, thick range bars, metric tiles with round icon badges, a heavier
-  curve and heavy, tight type. Interface parts take tonal steps of your accent
-  colour; the weather drawings and the sky take their colours from the
-  weather. Moon and Daylight start Expressive and can be set to Classic — a
-  shaded moon on a night-sky gradient, a rayed sun on a dashed arc — for anyone
-  who would rather not have Material; every other style starts Classic.
+- **The Periodic note card reads from Journals.** A new *Source* setting
+  points the card at the
+  [Journals](https://github.com/srg-kostyrko/obsidian-journal) plugin instead
+  of Periodic Notes. You pick a journal by name, so several journals of the
+  same cadence and custom cadences all work, and notes are resolved and created
+  through Journals' own API with its folders and templates. Existing cards keep
+  reading from Periodic Notes (#318).
 
-  The *Artistic* style's sky, and the board's weather background under its own
-  new *Design* setting, get a flat illustrated sky to match: a pastel sky with
-  dark text by day and a deep one with light text by night, one palette per
-  condition, rolling hills along the bottom, bubbly opaque clouds, a turning
-  sunny sun with ringed halo, sparkle stars, pill raindrops, flower snowflakes,
-  pill fog and solid bolts — all moving exactly as the classic sky does.
-
-- **Two new weather card styles: Moon and Daylight.** (#338) Both are drawn in
-  the Material 3 Expressive manner — flat tonal colours for the light and the
-  dark theme, soft shapes from Material's shape library, pill chips and a
-  heavy headline.
-
-  *Moon* draws tonight's moon in its real phase — the lit part computed for
-  the moment, mirrored south of the equator — on a slowly turning "cookie"
-  shape, with the phase's name, how much of it is lit, an expressive slider
-  showing where tonight sits in the lunar month, the dates of the next full
-  and new moon, and today's moonrise and moonset for the card's place. Its
-  *Layout* setting has a **Clean** option: just the moon on its turning cookie
-  and the slider, on the card's own surface. The moon springs into place, floats, and the slider
-  fills to tonight on the first reading.
-
-  *Daylight* puts the sun — a turning "sunny" shape — on a parabola from
-  sunrise to sunset over a horizon, with a shallower one under it for the
-  night. The stretch it has already crossed is a thick wavy track, the rest a
-  flat one; the sun walks up to the hour when the card opens and keeps moving
-  minute by minute, and the headline is the next sunset (or, by night,
-  sunrise) with how long until it and the day's length beneath. By night the
-  palette turns from orange to indigo.
-
-  Neither makes an extra request: the moon is worked out locally from the time
-  and the card's coordinates, and the sun's arc from the forecast's own sunrise
-  and sunset. Both read the place's clock, not yours. The full forecast a
-  weather card opens now lists the moon's phase too.
-
-- **A card for the Vault Pet plugin.** *Vault Pet*, in the "Add card" picker's
-  Fun section, gives
-  [Vault Pet](https://github.com/elliott-json-park/obsidian-vault-pet) a place
-  on the board. *Show* picks which of the plugin's own two surfaces the card
-  holds: **the pet** — its compact card, with the sprite, the level bar,
-  today's characters, links and notes, and the streak, clickable to pet it —
-  or **the pet house**, its whole house view hosted in the card, with quests,
-  dex, badges, wardrobe and stats. A second picker entry, *Vault Pet house*,
-  is the same card started on the house at a larger size.
-
-  Both are drawn by Vault Pet itself: Hearth renders the plugin's own
-  `vault-pet` block, or hosts its house view the way the Plugin view card
-  hosts any registered view. So the pet animates, the bar fills and a click
-  pets it, all under the plugin's control, and Hearth keeps no copy of the XP,
-  the levels, the badges or anything else it would only be able to get wrong.
-  Everything about the pet stays in **Settings → Vault Pet**; the card's own
-  settings are the two bits of chrome around it — whether the hosted house
-  keeps its title bar, and whether the corner button that opens the house in
-  the sidebar is there.
-
-  Hearth's own *Pet* card is unchanged and still needs no plugin at all.
-
-- **A Folder card.** *Folder*, in the "Add card" picker's Notes & files
-  section, lists what sits one level inside a folder you pick — its subfolders
-  and its files — as rows or as icon tiles. Clicking a file opens it; clicking a
-  subfolder, the card's empty space or its folder button opens the folder
-  browser. (#329)
-
-  Its default order is *Same as the file explorer*: the card asks the explorer
-  to order the folder, the same call the sidebar makes when it draws it — so a
-  folder does not have to be open in the sidebar, or the sidebar even visible,
-  and a plugin that lets you drag the sidebar into your own order (such as
-  [Flexplorer](https://github.com/kh4f/flexplorer)) replaces that very call, so
-  its order is the one the card shows, pinned items and all. When the explorer
-  can't be read the card falls back to the sort the explorer is *set* to, so it
-  still agrees with the sidebar. Name, modified and created orders are offered
-  too, and under those folders lead and sort by name, exactly as they do in the
-  explorer. A file such a plugin *hides* rather than moves is still on the card:
-  hiding is a mark on a row, not a change to the order.
-
-  Clicking a subfolder opens the browser by default, or walks the card itself
-  into it when *Opening a subfolder* is set to *In the card* — the card then
-  grows a path row with a back arrow that never climbs above the folder the card
-  is set to. Where a card has been walked to is deliberately not part of the
-  dashboard: it isn't saved, synced or carried in a shared board, it survives
-  arranging and a tab reopen, and it resets when Obsidian restarts.
-
-  The browser behind the card is the whole folder: a breadcrumb from the vault
-  root down, each subfolder as its own section opened one extra level, and the
-  files between them gathered into blocks so the page keeps the sidebar's order
-  rather than sorting the folders away from the files. Every folder on the page
-  — a breadcrumb step, a section heading, a row — steps the dialog into that
-  folder, so a whole tree can be walked without leaving it. It reopens where it
-  was left, and Ctrl/Cmd-clicking a note opens it without closing the browser,
-  for picking several notes into tabs rather than leaving to read one.
+- **Tasks gain tags, descriptions and more filters.**
+  - **Tags** — a *Tags* field in the quick view, *Edit details* and the Kanban
+    *+ Add card* form, written as `#tag` in the task line (or a linked note's
+    frontmatter) and shown as a chip rather than in the title.
+  - **Filter by tag** — *Filter tasks* gains a Tags row built from the card's
+    own tasks.
+  - **Descriptions** — lines indented under a `- [ ]` checkbox show as muted
+    sub-bullets under the task and can be edited, leaving sub-tasks alone.
+  - **Filter on Kanban** — the board offers the list layout's *Filter* button;
+    columns stay put and thin out.
 
 - **Choose the width at which the board goes narrow.** *Narrow below*, under
-  **Settings → Hearth → Mobile → Layout**, sets the board width at or below
-  which Hearth switches to the narrow layout — the single full-width column,
-  where *Stack cards on narrow screens* is on. It was fixed at 600 pixels,
-  which is a phone in landscape but leaves a half-screen desktop window on the
-  free-form layout; the slider covers 320 to 1200, so the column can start
-  wherever your board stops being readable. Each dashboard can override it from
-  *Dashboard settings → Layout → Narrow below*, because a dense board wants the
-  column sooner than a two-card one. (#316)
-
-  The switch follows the window as you drag it: crossing the threshold in
-  either direction rebuilds the board right then, and changing the threshold
-  re-judges the board at its current width. Your stored layout is untouched
-  either way and comes back as it was at full width.
-
-- **The Periodic note card reads from Journals.** The card gained a *Source*
-  setting: leave it on Periodic Notes, or point it at the
-  [Journals](https://github.com/srg-kostyrko/obsidian-journal) plugin, which
-  covers the same ground — a note per day, week, month, quarter or year from
-  your own folder, name template and note template. Existing cards are
-  untouched and keep reading from Periodic Notes. *Journal note* is in the
-  "Add card" picker too, as the same card with the source preset. (#318)
-
-  On Journals the card asks for a **journal by name** rather than a period,
-  because a vault can hold several journals of the same cadence — a personal
-  daily and a work daily — and the journal already knows what period it writes.
-  That covers journals on a custom cadence, like every two weeks, with nothing
-  extra to choose.
-
-  The note is resolved, and a missing one created, through the Journals
-  plugin's own API, so its folder, templates and creation prompts apply exactly
-  as they do from Journals itself — the same rule the rest of Hearth's
-  integrations follow. Everything else about the card is unchanged: the
-  read-only, editable and live-preview modes, the open button, and the live
-  update as you type.
-
-- **Descriptions on checkbox tasks.** Lines indented under a `- [ ]` checkbox
-  now show as muted sub-bullets under the task, the same block a Kanban card's
-  description has always drawn, with no setting to turn on. The description
-  stops at the first nested checkbox, so a sub-task still reads as its own task
-  instead of appearing twice.
-
-  The description is editable too, in the quick view and *Edit details*, the
-  same plain-text field a Kanban card has — one sub-bullet written under the
-  checkbox per line typed. The write is kept narrow: only those description
-  lines are replaced, and only when the description actually changed, so a
-  sub-task, anything nested under it, and a description you didn't touch keep
-  exactly the shape the note gave them.
-
-- **Filter tasks by tag.** *Filter tasks* gains a Tags row, built from the tags
-  the card's own tasks carry — a TaskNotes task note's tags (frontmatter and
-  inline), and the hashtags written in a checkbox or Kanban card's line. Pick
-  several to match a task carrying any of them; the row combines with the other
-  criteria the way Contexts and Projects already do. TaskNotes' own "this is a
-  task" and archive tags are left out, since every task carries them and a chip
-  every task matches filters nothing.
-
-- **Tags in the task editor.** The quick view, *Edit details* and the Kanban
-  *+ Add card* form gain a **Tags** field (with *Dates & priorities* on), typed
-  space- or comma-separated with the `#` optional. Tags are written as plain
-  `#tag` text in the task line — a tag already there keeps its place, only the
-  ones you removed are cut and only the new ones appended — or, for a card that
-  is a link to a note, into that note's frontmatter `tags`. TaskNotes tasks are
-  still created and edited in TaskNotes, so Hearth reads their tags without
-  writing them.
-
-  Like the date and priority marks, a tag is scraped out of the title rather
-  than left in it: a task reads as "Buy milk" and carries a small `#shopping`
-  chip beside its dates. With *Dates & priorities* off nothing is scraped and
-  tags stay part of the text, as before.
-
-- **The Filter button on the Kanban board.** The board now offers the same
-  hover-revealed *Filter* control the list layout has, and honours the filter a
-  card carries. Columns stay put and thin out, so a column emptied by a filter
-  is still there to drag a card into — and a filter set in one layout means the
-  same thing after switching to the other.
-
-### Fixed
-
-- **Settings and dialogs stay where you were scrolled.** Flipping a toggle,
-  picking from a dropdown or editing a list halfway down Hearth's settings, a
-  card's or a board's settings, or the setup wizard rebuilt the pane and threw
-  it back to the top. It now keeps its place; only moving to another page, tab
-  or step starts at the top. The integrations list's *Show* button scrolls
-  straight to its section without that jump first, and Operon's lands on the
-  Operon section rather than on File icons.
-
-- **Category names in the gallery and the add-card picker are no longer cut
-  off.** A name too long for the rail wraps onto a second line instead of
-  ending in an ellipsis, and a theme's border and shadow on buttons no longer
-  box in every row.
-
-- **Hue and glow task colours show in the Expressive design.** A task field
-  drawn as *Hue* or *Glow* — a priority tinting its Kanban card, say — lost its
-  colour on a card in the Expressive design, whose own fill cleared the tint.
-  Kanban cards and list rows now carry it in both designs.
-
-- **Every view of the calendars is Expressive.** The Expressive design had
-  reached the month grids only. The full calendar's week and day views now draw
-  the days as tonal lanes with rounded event blocks, a round-ended *now* bar and
-  today's date on an accent pill; its list view and the mini calendar's agenda
-  set each day as a heavy heading — today's number on the accent's cookie —
-  over a grouped list of tonal event rows with pill badges; and week numbers,
-  the "+ more" link and the dots layout follow along.
-
-- **Every bookmark on the Bookmarks card opens something now.** The card drew a
-  clickable row for all five kinds of bookmark Obsidian stores, but only ever
-  opened two of them: a bookmarked **folder** fell through the check that looks
-  for a note and did nothing at all, and a saved **search** or a saved **graph**
-  had no handling whatsoever. A row that looks clickable and goes nowhere reads
-  as the whole card being broken, which is how it was reported
-  ([#327](https://github.com/ondreu/Hearth/issues/327)).
-
-  Each kind now has a destination. A folder opens Hearth's own folder browser —
-  the one the Folder card added — rather than revealing the folder in the
-  sidebar, because the browser is the better answer on a board and it is
-  already there. A saved search goes to Obsidian's search pane, the same
-  hand-off clicking a tag has always made. A saved graph opens the graph view
-  carrying the state that was saved with it, since the filters, groups and
-  forces *are* what was bookmarked. If the core Search or Graph view plugin is
-  switched off, the card says so instead of going quiet.
-
-- **A bookmark into a note lands on the heading you bookmarked.** Obsidian lets
-  you bookmark a heading or a block inside a note, not just the note. The card
-  dropped that part of the bookmark and opened the file at the top; it now
-  opens exactly where the bookmark points.
-
-- **The Bookmarks card keeps up with your bookmarks.** Adding, renaming,
-  removing or reordering a bookmark left the card showing the old list until
-  something unrelated rebuilt the board — the bookmark store is a file in the
-  config folder, so none of the vault changes Hearth watches ever saw it. The
-  card now follows the store itself and redraws when it changes.
-
-- **The tab bar no longer flickers while a board is up on macOS.** With
-  Obsidian's *Translucent window* switched on, the frosted glass behind cards
-  and macOS's own vibrancy were sampling each other: a `backdrop-filter` reads
-  whatever is behind it, and under a translucent window that is the material
-  macOS paints for the entire window — chrome included — so every frost layer
-  re-filtering dragged the tab bar through a re-blend with it. That is why the
-  flicker showed only at the *Balanced* and *Full* performance tiers, the two
-  that build frost, and stopped the moment a note was opened over the board.
-
-  The frosted glass now stands down for as long as the translucent window is
-  on, and only on macOS. Nothing else changes: motion, the wallpaper, card
-  opacity and the cards' own translucency are untouched, and no setting is
-  written — your blur radius is kept and takes effect again the moment you turn
-  the translucent window off. A note under *Dashboard → Card surface* says so
-  while it applies, so a missing blur is never a mystery
-  ([#272](https://github.com/ondreu/Hearth/issues/272)).
-
-- **The Git card no longer gets stuck asking you to enable a plugin you already
-  have.** On a cold start, obsidian-git builds its git manager after Obsidian's
-  layout is ready — probing the git binary takes long enough on desktop that a
-  restored Hearth tab can render first. The card read that half-started plugin
-  as no plugin at all and settled on *Enable the Git plugin*, where it stayed
-  until something forced a re-render. It now recognises a plugin that is still
-  starting, shows the same temporary not-ready state it shows while obsidian-git
-  is looking for the repository, and fills itself in as soon as the plugin is
-  usable ([#315](https://github.com/ondreu/Hearth/issues/315)).
-
-- **The board no longer wobbles sideways on a phone.** The scroll area allowed
-  horizontal scrolling by accident: `overflow-y: auto` makes the horizontal
-  axis `auto` too, so anything overshooting the pane by a few pixels turned the
-  whole dashboard into a plane that could be dragged left and right — enough to
-  shave its own left edge and to sit a horizontal scrollbar across the bottom.
-  The board is laid out to the pane's width in every mode, so that axis is now
-  clipped outright and one stray element can't drag the board with it.
-
-  One such element is fixed at the source too: a title with a word too long to
-  break — a one-word vault name at header size — sized the title row past the
-  board's edge instead of wrapping inside it
-  ([#326](https://github.com/ondreu/Hearth/issues/326)).
+  **Settings → Hearth → Mobile → Layout** and per board in *Dashboard settings
+  → Layout*, sets the width at which the board becomes a single stacked
+  column. It was fixed at 600 pixels; it now defaults to 700, because many
+  phones report a viewport just over 600 and got the desktop layout. A pane
+  between 600 and 700 pixels now stacks — set 600 to keep the old behaviour
+  (#316, #326).
 
 ### Changed
 
 - **A shorter, visual setup wizard.** First-run setup is three steps instead of
-  six. It opens on what the vault is for, with the plugins Hearth found beside
-  those choices, rather than on a welcome page and a form of title fields. The
-  look step shows every background and card style as a small painting of
-  itself instead of describing it. The last step is a scale drawing of the
-  board about to be built — the real background, the header, every card in
-  place and in its style — which follows the title field as you type. The
-  finer header settings are folded away under it.
+  six: what the vault is for (with the plugins Hearth found), the look — design,
+  background and card style, each shown as a small painting — and a scale
+  preview of the board about to be built. The boards it builds have no empty
+  cards and no holes: working cards in a main column, small ones (a switchable
+  clock, calendar, weather, statistics) in a side column, and cards that need a
+  feed or a place ask for it in the wizard instead of arriving unconfigured.
 
-- **Setup builds boards with no empty cards and no holes.** The working cards
-  fill a main column and the small ones — clock, mini calendar, weather,
-  statistics — a side column, with each card stretched to close the gaps
-  around it. The clock is a small card at the top of that column, and can be
-  switched off, instead of a strip across the full width of every board. A
-  card that would open waiting to be configured now waits for its answer in
-  the wizard instead: *Reading* asks for a feed and *A bit of life* for a
-  place, and their cards join the board once they have one. *Quick capture*
-  gives one card of ready actions (new note, today's note, quick switcher,
-  search, the command palette) in place of two empty launchpads.
+- **Smaller touches.**
+  - A dashboard can be deleted from its own settings, not only from a
+    right-click.
+  - The Ko-fi button is a filled pill in Ko-fi's red, with a cup that wobbles
+    under the pointer (unless you've asked for less motion).
+  - Two long-retired settings fields (`commandId`, `use24Hour`) are gone from
+    the code; old `data.json` files still upgrade in place.
 
-- **Hearth's wallpaper is drawn, not downloaded.** The *Hearth default*
-  background used to be a 1.5 MB picture fetched from GitHub on every first
-  paint, and so vanished whenever *Disable external calls* was on. It is now
-  drawn by the plugin in the background's *Design*: **Classic** is layered
-  hills with a cabin and a few pines — a soft morning under a low sun in a
-  light theme, a moonlit night with stars in a dark one, switching with the
-  theme — and **Expressive** gathers Material 3 Expressive shapes (a cookie, a
-  clover, a sunny, a pill, a ring, sparkles and wavy lines) in the corners, in
-  tonal steps of your accent colour, leaving the middle calm for the cards.
-  The *Design* is the one the live weather sky already had, under
-  **Settings → Hearth → Appearance → Background**, and a board can override
-  it. Nothing is fetched, so it now shows with external calls off too.
+### Fixed
 
-  Its opacity and blur are set for a drawing rather than a photo: a new vault
-  starts at opacity 0.8 with no blur (it was 0.35 and 2). Switching to
-  *Hearth default* lifts a photo's dimming, and switching to a vault image or
-  an image URL dims and softens the photo back to 0.35 and 2. Values you have
-  already saved are kept.
+- **Every bookmark on the Bookmarks card works.** Bookmarked folders, searches
+  and graphs did nothing: a folder now opens Hearth's folder browser, a search
+  Obsidian's search pane, and a graph the graph view with its saved filters. A
+  bookmarked heading or block opens right there instead of at the top of the
+  note, and the card now updates as soon as your bookmarks change (#327).
 
-- **A board set to *Hearth default* keeps it.** Choosing *Hearth default* in
-  a board's own background settings painted nothing and was forgotten on the
-  next restart; it now shows Hearth's wallpaper and is saved with the board.
+- **Settings keep your place.** Flipping a toggle or editing a list halfway
+  down Hearth's settings, a card's or board's settings, or the setup wizard no
+  longer throws the pane back to the top. Long category names in the gallery
+  and the add-card picker wrap instead of being cut off.
 
-- **A phone gets the stacked column again: *Narrow below* now starts at 700.**
-  The threshold is a measured width, and 600 was chosen for readability — the
-  width at which a half-width card stops holding a line of text. Phones do not
-  report the width they look like: an Android device at a pixel ratio of 2
-  reports a 608-pixel viewport for a 1216-pixel display, landing eight pixels
-  on the wrong side of 600 and drawing the desktop free-form board on a phone
-  screen, with *Stack when narrow* on and doing nothing. 700 clears the phones
-  that report 600-680 and still leaves a half-screen desktop window free-form
-  ([#326](https://github.com/ondreu/Hearth/issues/326)).
+- **The tab bar no longer flickers on macOS with a translucent window.** The
+  cards' frosted glass stands down while the translucent window is on;
+  your blur setting is kept and returns when you turn it off, and a note under
+  *Dashboard → Card surface* says so (#272).
 
-  This does change boards that never set a threshold: a pane between 600 and
-  700 pixels now stacks where it used to draw a scaled free-form board. A
-  stored *Narrow below* is a choice and is kept, 600 included — set it back
-  there, globally or per board, to keep the old width.
+- **The Git card no longer asks you to enable a plugin you already have.** On
+  a cold start it mistook a still-starting obsidian-git for a missing one; it
+  now waits and fills itself in once the plugin is ready (#315).
 
-- **Two long-retired settings fields are gone from the code for good.** A
-  mobile action button's pre-1.9.0 `commandId` and a clock card's
-  pre-`hourFormat` `use24Hour` were both already folded into their replacements
-  when settings are loaded and when a backup is imported, but each was also
-  still declared on the public config type and read a second time at render
-  time as a safety net. The types now stop at the current shape and the
-  duplicate reads are gone; the folds themselves stay exactly where they were,
-  so an old `data.json` still upgrades in place and no button or clock face
-  changes. The folds now have tests of their own, which the safety nets had
-  been standing in for.
+- **The board no longer wobbles sideways on a phone.** The board can't be
+  dragged horizontally any more, and a long one-word title wraps instead of
+  pushing past the edge (#326).
 
-- **Delete a dashboard from its settings, not only from a right-click.** The
-  dashboard settings modal — reached from arrange mode's toolbar or a plugin
-  board's gear, as well as the switcher's menu — now has a *Delete dashboard*
-  button beside *Done*, asking first exactly as the right-click menu does. It
-  is left out while only one dashboard exists, since the last one can't be
-  deleted.
+- **A board set to *Hearth default* keeps it.** Choosing it in a board's own
+  background settings painted nothing and was forgotten on restart.
 
 
 ## [3.1.0]
