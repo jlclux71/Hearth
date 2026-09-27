@@ -11,7 +11,7 @@ preceding beta series.
 History begins at 1.5.0. For releases before 1.5.0, see the
 [GitHub Releases](https://github.com/ondreu/Hearth/releases) page.
 
-## [3.2.0]
+## [3.3.0]
 
 ### Added
 
@@ -45,6 +45,44 @@ History begins at 1.5.0. For releases before 1.5.0, see the
   that type themselves into the bar when clicked. Type `?` into any search
   bar, run **Hearth: Show search tips**, or open it from Settings → Search. An
   empty search bar offers it once after this update.
+
+- **Checkbox tasks on the calendars.** Both calendar cards can now draw
+  Markdown checkbox tasks (`- [ ] …`) by the dates written on them in the Tasks
+  format — 📅 due and ⏳ scheduled — the way they already draw TaskNotes. Turn
+  it on under **Checkbox tasks** in the card's settings; entries can be ticked
+  off from the calendar and open the note at the task's line. Optionally limit
+  it to some folders and pick its colours.
+
+- **List or tiles for Favorites and Recent files** (#358). Both cards get a
+  **Display** setting: *List* puts the icon beside the name, one row per file;
+  *Tiles* draws the grid with the icon above it. Existing cards keep the look
+  they had (tiles for Favorites, a list for Recent files); a newly added
+  Favorites card starts as a list, like every other file-listing card. Tiles
+  work with Recent files' **Fit to card height** too.
+
+### Changed
+
+- **The search results float more clearly above the board.** The dropdown
+  casts a deeper two-layer shadow, denser in dark themes, and in the
+  Expressive design takes Material 3's menu elevation with a tonal edge, so
+  it no longer reads as sitting flat on the cards below.
+
+### Fixed
+
+- **No more sideways wobble on a phone with the Arrange button on hover.**
+  The hidden button was nudged past the board's right edge, which left the
+  whole board a few pixels wider than the screen and scrollable sideways
+  (#326). It now fades and shrinks in place.
+
+- **A fit-to-page board follows the pane as you resize it.** Its cards stayed
+  at their old size until the pane edge stopped moving and then jumped into
+  place. On the *Full* performance tier they now follow the resize frame by
+  frame; the lower tiers keep the single re-fit at the end to save the work.
+
+
+## [3.2.0]
+
+### Added
 
 - **Material 3 Expressive: a second design for all of Hearth.** A new
   **Design** setting — *Classic* or *Expressive* — heads **Settings → Hearth →
@@ -119,26 +157,7 @@ History begins at 1.5.0. For releases before 1.5.0, see the
   Find it in the "Add card" picker's Fun section. Hearth's own *Pet* card is
   unchanged.
 
-- **Checkbox tasks on the calendars.** Both calendar cards can now draw
-  Markdown checkbox tasks (`- [ ] …`) by the dates written on them in the Tasks
-  format — 📅 due and ⏳ scheduled — the way they already draw TaskNotes. Turn
-  it on under **Checkbox tasks** in the card's settings; entries can be ticked
-  off from the calendar and open the note at the task's line. Optionally limit
-  it to some folders and pick its colours.
-
-- **List or tiles for Favorites and Recent files** (#358). Both cards get a
-  **Display** setting: *List* puts the icon beside the name, one row per file;
-  *Tiles* draws the grid with the icon above it. Existing cards keep the look
-  they had (tiles for Favorites, a list for Recent files); a newly added
-  Favorites card starts as a list, like every other file-listing card. Tiles
-  work with Recent files' **Fit to card height** too.
-
 ### Changed
-
-- **The search results float more clearly above the board.** The dropdown
-  casts a deeper two-layer shadow, denser in dark themes, and in the
-  Expressive design takes Material 3's menu elevation with a tonal edge, so
-  it no longer reads as sitting flat on the cards below.
 
 - **A shorter, visual setup wizard.** First-run setup is three steps instead of
   six: what the vault is for (with the plugins Hearth found), the look — design
@@ -165,16 +184,6 @@ History begins at 1.5.0. For releases before 1.5.0, see the
 
 - **A board set to *Hearth default* keeps it.** Choosing it in a board's own
   background settings painted nothing and was forgotten on restart.
-
-- **No more sideways wobble on a phone with the Arrange button on hover.**
-  The hidden button was nudged past the board's right edge, which left the
-  whole board a few pixels wider than the screen and scrollable sideways
-  (#326). It now fades and shrinks in place.
-
-- **A fit-to-page board follows the pane as you resize it.** Its cards stayed
-  at their old size until the pane edge stopped moving and then jumped into
-  place. On the *Full* performance tier they now follow the resize frame by
-  frame; the lower tiers keep the single re-fit at the end to save the work.
 
 
 ## [3.1.1]
