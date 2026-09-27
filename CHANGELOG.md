@@ -15,223 +15,74 @@ History begins at 1.5.0. For releases before 1.5.0, see the
 
 ### Added
 
-- **A Folder card.** *Folder*, in the "Add card" picker's Notes & files
-  section, lists what sits one level inside a folder you pick — its subfolders
-  and its files — as rows or as icon tiles. Clicking a file opens it; clicking a
-  subfolder, the card's empty space or its folder button opens the folder
-  browser. (#329)
+- **A Folder card.** Lists what sits one level inside a folder — subfolders
+  and files, as rows or tiles — in the same order as the file explorer,
+  including a custom order from a plugin such as
+  [Flexplorer](https://github.com/kh4f/flexplorer); name, modified and created
+  orders are offered too. Clicking a file opens it; a subfolder opens a folder
+  browser you can walk the whole tree in (Ctrl/Cmd-click keeps it open while
+  opening notes), or, with *Opening a subfolder* set to *In the card*, walks
+  the card itself into it (#329).
 
-  Its default order is *Same as the file explorer*: the card asks the explorer
-  to order the folder, the same call the sidebar makes when it draws it — so a
-  folder does not have to be open in the sidebar, or the sidebar even visible,
-  and a plugin that lets you drag the sidebar into your own order (such as
-  [Flexplorer](https://github.com/kh4f/flexplorer)) replaces that very call, so
-  its order is the one the card shows, pinned items and all. When the explorer
-  can't be read the card falls back to the sort the explorer is *set* to, so it
-  still agrees with the sidebar. Name, modified and created orders are offered
-  too, and under those folders lead and sort by name, exactly as they do in the
-  explorer. A file such a plugin *hides* rather than moves is still on the card:
-  hiding is a mark on a row, not a change to the order.
+- **The Periodic note card reads from Journals.** A new *Source* setting
+  points the card at the
+  [Journals](https://github.com/srg-kostyrko/obsidian-journal) plugin instead
+  of Periodic Notes. You pick a journal by name, so several journals of the
+  same cadence and custom cadences all work, and notes are resolved and created
+  through Journals' own API with its folders and templates. Existing cards keep
+  reading from Periodic Notes (#318).
 
-  Clicking a subfolder opens the browser by default, or walks the card itself
-  into it when *Opening a subfolder* is set to *In the card* — the card then
-  grows a path row with a back arrow that never climbs above the folder the card
-  is set to. Where a card has been walked to is deliberately not part of the
-  dashboard: it isn't saved, synced or carried in a shared board, it survives
-  arranging and a tab reopen, and it resets when Obsidian restarts.
-
-  The browser behind the card is the whole folder: a breadcrumb from the vault
-  root down, each subfolder as its own section opened one extra level, and the
-  files between them gathered into blocks so the page keeps the sidebar's order
-  rather than sorting the folders away from the files. Every folder on the page
-  — a breadcrumb step, a section heading, a row — steps the dialog into that
-  folder, so a whole tree can be walked without leaving it. It reopens where it
-  was left, and Ctrl/Cmd-clicking a note opens it without closing the browser,
-  for picking several notes into tabs rather than leaving to read one.
+- **Tasks gain tags, descriptions and more filters.**
+  - **Tags** — a *Tags* field in the quick view, *Edit details* and the Kanban
+    *+ Add card* form, written as `#tag` in the task line (or a linked note's
+    frontmatter) and shown as a chip rather than in the title.
+  - **Filter by tag** — *Filter tasks* gains a Tags row built from the card's
+    own tasks.
+  - **Descriptions** — lines indented under a `- [ ]` checkbox show as muted
+    sub-bullets under the task and can be edited, leaving sub-tasks alone.
+  - **Filter on Kanban** — the board offers the list layout's *Filter* button;
+    columns stay put and thin out.
 
 - **Choose the width at which the board goes narrow.** *Narrow below*, under
-  **Settings → Hearth → Mobile → Layout**, sets the board width at or below
-  which Hearth switches to the narrow layout — the single full-width column,
-  where *Stack cards on narrow screens* is on. It was fixed at 600 pixels,
-  which is a phone in landscape but leaves a half-screen desktop window on the
-  free-form layout; the slider covers 320 to 1200, so the column can start
-  wherever your board stops being readable. Each dashboard can override it from
-  *Dashboard settings → Layout → Narrow below*, because a dense board wants the
-  column sooner than a two-card one. (#316)
-
-  The switch follows the window as you drag it: crossing the threshold in
-  either direction rebuilds the board right then, and changing the threshold
-  re-judges the board at its current width. Your stored layout is untouched
-  either way and comes back as it was at full width.
-
-- **The Periodic note card reads from Journals.** The card gained a *Source*
-  setting: leave it on Periodic Notes, or point it at the
-  [Journals](https://github.com/srg-kostyrko/obsidian-journal) plugin, which
-  covers the same ground — a note per day, week, month, quarter or year from
-  your own folder, name template and note template. Existing cards are
-  untouched and keep reading from Periodic Notes. *Journal note* is in the
-  "Add card" picker too, as the same card with the source preset. (#318)
-
-  On Journals the card asks for a **journal by name** rather than a period,
-  because a vault can hold several journals of the same cadence — a personal
-  daily and a work daily — and the journal already knows what period it writes.
-  That covers journals on a custom cadence, like every two weeks, with nothing
-  extra to choose.
-
-  The note is resolved, and a missing one created, through the Journals
-  plugin's own API, so its folder, templates and creation prompts apply exactly
-  as they do from Journals itself — the same rule the rest of Hearth's
-  integrations follow. Everything else about the card is unchanged: the
-  read-only, editable and live-preview modes, the open button, and the live
-  update as you type.
-
-- **Descriptions on checkbox tasks.** Lines indented under a `- [ ]` checkbox
-  now show as muted sub-bullets under the task, the same block a Kanban card's
-  description has always drawn, with no setting to turn on. The description
-  stops at the first nested checkbox, so a sub-task still reads as its own task
-  instead of appearing twice.
-
-  The description is editable too, in the quick view and *Edit details*, the
-  same plain-text field a Kanban card has — one sub-bullet written under the
-  checkbox per line typed. The write is kept narrow: only those description
-  lines are replaced, and only when the description actually changed, so a
-  sub-task, anything nested under it, and a description you didn't touch keep
-  exactly the shape the note gave them.
-
-- **Filter tasks by tag.** *Filter tasks* gains a Tags row, built from the tags
-  the card's own tasks carry — a TaskNotes task note's tags (frontmatter and
-  inline), and the hashtags written in a checkbox or Kanban card's line. Pick
-  several to match a task carrying any of them; the row combines with the other
-  criteria the way Contexts and Projects already do. TaskNotes' own "this is a
-  task" and archive tags are left out, since every task carries them and a chip
-  every task matches filters nothing.
-
-- **Tags in the task editor.** The quick view, *Edit details* and the Kanban
-  *+ Add card* form gain a **Tags** field (with *Dates & priorities* on), typed
-  space- or comma-separated with the `#` optional. Tags are written as plain
-  `#tag` text in the task line — a tag already there keeps its place, only the
-  ones you removed are cut and only the new ones appended — or, for a card that
-  is a link to a note, into that note's frontmatter `tags`. TaskNotes tasks are
-  still created and edited in TaskNotes, so Hearth reads their tags without
-  writing them.
-
-  Like the date and priority marks, a tag is scraped out of the title rather
-  than left in it: a task reads as "Buy milk" and carries a small `#shopping`
-  chip beside its dates. With *Dates & priorities* off nothing is scraped and
-  tags stay part of the text, as before.
-
-- **The Filter button on the Kanban board.** The board now offers the same
-  hover-revealed *Filter* control the list layout has, and honours the filter a
-  card carries. Columns stay put and thin out, so a column emptied by a filter
-  is still there to drag a card into — and a filter set in one layout means the
-  same thing after switching to the other.
+  **Settings → Hearth → Mobile → Layout** and per board in *Dashboard settings
+  → Layout*, sets the width at which the board becomes a single stacked
+  column. It was fixed at 600 pixels; it now defaults to 700, because many
+  phones report a viewport just over 600 and got the desktop layout. A pane
+  between 600 and 700 pixels now stacks — set 600 to keep the old behaviour
+  (#316, #326).
 
 - **Hearth speaks German.** A full `de` locale joins English and Simplified
-  Chinese, so every string Hearth draws — commands, notices, the setup wizard,
-  all of the plugin and card settings, card bodies and the add-card picker —
-  comes out in German when Obsidian's own display language is German. It is
-  picked up from Obsidian's language at load and needs no setting of its own;
-  regional codes fall back to `de`, and anything untranslated still falls back
-  to English. It uses the informal "du" throughout.
-  ([#312](https://github.com/ondreu/Hearth/pull/312))
-
-### Fixed
-
-- **Every bookmark on the Bookmarks card opens something now.** The card drew a
-  clickable row for all five kinds of bookmark Obsidian stores, but only ever
-  opened two of them: a bookmarked **folder** fell through the check that looks
-  for a note and did nothing at all, and a saved **search** or a saved **graph**
-  had no handling whatsoever. A row that looks clickable and goes nowhere reads
-  as the whole card being broken, which is how it was reported
-  ([#327](https://github.com/ondreu/Hearth/issues/327)).
-
-  Each kind now has a destination. A folder opens Hearth's own folder browser —
-  the one the Folder card added — rather than revealing the folder in the
-  sidebar, because the browser is the better answer on a board and it is
-  already there. A saved search goes to Obsidian's search pane, the same
-  hand-off clicking a tag has always made. A saved graph opens the graph view
-  carrying the state that was saved with it, since the filters, groups and
-  forces *are* what was bookmarked. If the core Search or Graph view plugin is
-  switched off, the card says so instead of going quiet.
-
-- **A bookmark into a note lands on the heading you bookmarked.** Obsidian lets
-  you bookmark a heading or a block inside a note, not just the note. The card
-  dropped that part of the bookmark and opened the file at the top; it now
-  opens exactly where the bookmark points.
-
-- **The Bookmarks card keeps up with your bookmarks.** Adding, renaming,
-  removing or reordering a bookmark left the card showing the old list until
-  something unrelated rebuilt the board — the bookmark store is a file in the
-  config folder, so none of the vault changes Hearth watches ever saw it. The
-  card now follows the store itself and redraws when it changes.
-
-- **The tab bar no longer flickers while a board is up on macOS.** With
-  Obsidian's *Translucent window* switched on, the frosted glass behind cards
-  and macOS's own vibrancy were sampling each other: a `backdrop-filter` reads
-  whatever is behind it, and under a translucent window that is the material
-  macOS paints for the entire window — chrome included — so every frost layer
-  re-filtering dragged the tab bar through a re-blend with it. That is why the
-  flicker showed only at the *Balanced* and *Full* performance tiers, the two
-  that build frost, and stopped the moment a note was opened over the board.
-
-  The frosted glass now stands down for as long as the translucent window is
-  on, and only on macOS. Nothing else changes: motion, the wallpaper, card
-  opacity and the cards' own translucency are untouched, and no setting is
-  written — your blur radius is kept and takes effect again the moment you turn
-  the translucent window off. A note under *Dashboard → Card surface* says so
-  while it applies, so a missing blur is never a mystery
-  ([#272](https://github.com/ondreu/Hearth/issues/272)).
-
-- **The Git card no longer gets stuck asking you to enable a plugin you already
-  have.** On a cold start, obsidian-git builds its git manager after Obsidian's
-  layout is ready — probing the git binary takes long enough on desktop that a
-  restored Hearth tab can render first. The card read that half-started plugin
-  as no plugin at all and settled on *Enable the Git plugin*, where it stayed
-  until something forced a re-render. It now recognises a plugin that is still
-  starting, shows the same temporary not-ready state it shows while obsidian-git
-  is looking for the repository, and fills itself in as soon as the plugin is
-  usable ([#315](https://github.com/ondreu/Hearth/issues/315)).
-
-- **The board no longer wobbles sideways on a phone.** The scroll area allowed
-  horizontal scrolling by accident: `overflow-y: auto` makes the horizontal
-  axis `auto` too, so anything overshooting the pane by a few pixels turned the
-  whole dashboard into a plane that could be dragged left and right — enough to
-  shave its own left edge and to sit a horizontal scrollbar across the bottom.
-  The board is laid out to the pane's width in every mode, so that axis is now
-  clipped outright and one stray element can't drag the board with it.
-
-  One such element is fixed at the source too: a title with a word too long to
-  break — a one-word vault name at header size — sized the title row past the
-  board's edge instead of wrapping inside it
-  ([#326](https://github.com/ondreu/Hearth/issues/326)).
+  Chinese: every string Hearth draws comes out in German when Obsidian's own
+  display language is German, with no setting of its own. Anything
+  untranslated falls back to English (#312).
 
 ### Changed
 
-- **A phone gets the stacked column again: *Narrow below* now starts at 700.**
-  The threshold is a measured width, and 600 was chosen for readability — the
-  width at which a half-width card stops holding a line of text. Phones do not
-  report the width they look like: an Android device at a pixel ratio of 2
-  reports a 608-pixel viewport for a 1216-pixel display, landing eight pixels
-  on the wrong side of 600 and drawing the desktop free-form board on a phone
-  screen, with *Stack when narrow* on and doing nothing. 700 clears the phones
-  that report 600-680 and still leaves a half-screen desktop window free-form
-  ([#326](https://github.com/ondreu/Hearth/issues/326)).
+- **Two long-retired settings fields are gone from the code.** A mobile action
+  button's pre-1.9.0 `commandId` and a clock card's `use24Hour` were already
+  folded into their replacements on load; the duplicate reads are gone and the
+  folds now have tests. Old `data.json` files still upgrade in place.
 
-  This does change boards that never set a threshold: a pane between 600 and
-  700 pixels now stacks where it used to draw a scaled free-form board. A
-  stored *Narrow below* is a choice and is kept, 600 included — set it back
-  there, globally or per board, to keep the old width.
+### Fixed
 
-- **Two long-retired settings fields are gone from the code for good.** A
-  mobile action button's pre-1.9.0 `commandId` and a clock card's
-  pre-`hourFormat` `use24Hour` were both already folded into their replacements
-  when settings are loaded and when a backup is imported, but each was also
-  still declared on the public config type and read a second time at render
-  time as a safety net. The types now stop at the current shape and the
-  duplicate reads are gone; the folds themselves stay exactly where they were,
-  so an old `data.json` still upgrades in place and no button or clock face
-  changes. The folds now have tests of their own, which the safety nets had
-  been standing in for.
+- **Every bookmark on the Bookmarks card works.** Bookmarked folders, searches
+  and graphs did nothing: a folder now opens Hearth's folder browser, a search
+  Obsidian's search pane, and a graph the graph view with its saved filters. A
+  bookmarked heading or block opens right there instead of at the top of the
+  note, and the card now updates as soon as your bookmarks change (#327).
+
+- **The tab bar no longer flickers on macOS with a translucent window.** The
+  cards' frosted glass stands down while the translucent window is on;
+  your blur setting is kept and returns when you turn it off, and a note under
+  *Dashboard → Card surface* says so (#272).
+
+- **The Git card no longer asks you to enable a plugin you already have.** On
+  a cold start it mistook a still-starting obsidian-git for a missing one; it
+  now waits and fills itself in once the plugin is ready (#315).
+
+- **The board no longer wobbles sideways on a phone.** The board can't be
+  dragged horizontally any more, and a long one-word title wraps instead of
+  pushing past the edge (#326).
 
 
 ## [3.1.0]
