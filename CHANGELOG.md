@@ -11,7 +11,7 @@ preceding beta series.
 History begins at 1.5.0. For releases before 1.5.0, see the
 [GitHub Releases](https://github.com/ondreu/Hearth/releases) page.
 
-## [3.1.1]
+## [3.2.0]
 
 ### Added
 
@@ -85,6 +85,44 @@ History begins at 1.5.0. For releases before 1.5.0, see the
   wallpaper at opacity 0.8 with no blur; switching between it and a photo
   moves those between 0.8/0 and 0.35/2. Values you've already saved are kept.
 
+- **A card for the Vault Pet plugin.** Shows
+  [Vault Pet](https://github.com/elliott-json-park/obsidian-vault-pet)'s pet
+  card or its whole pet house on the board, drawn by the plugin itself — so
+  the pet animates and can be petted, and Hearth keeps no copy of its data.
+  Find it in the "Add card" picker's Fun section. Hearth's own *Pet* card is
+  unchanged.
+
+### Changed
+
+- **A shorter, visual setup wizard.** First-run setup is three steps instead of
+  six: what the vault is for (with the plugins Hearth found), the look — design,
+  background and card style, each shown as a small painting — and a scale
+  preview of the board about to be built. The boards it builds have no empty
+  cards and no holes: working cards in a main column, small ones (a switchable
+  clock, calendar, weather, statistics) in a side column, and cards that need a
+  feed or a place ask for it in the wizard instead of arriving unconfigured.
+
+- **Smaller touches.**
+  - A dashboard can be deleted from its own settings, not only from a
+    right-click.
+  - The Ko-fi button is a filled pill in Ko-fi's red, with a cup that wobbles
+    under the pointer (unless you've asked for less motion).
+
+### Fixed
+
+- **Settings keep your place.** Flipping a toggle or editing a list halfway
+  down Hearth's settings, a card's or board's settings, or the setup wizard no
+  longer throws the pane back to the top. Long category names in the gallery
+  and the add-card picker wrap instead of being cut off.
+
+- **A board set to *Hearth default* keeps it.** Choosing it in a board's own
+  background settings painted nothing and was forgotten on restart.
+
+
+## [3.1.1]
+
+### Added
+
 - **A Folder card.** Lists what sits one level inside a folder — subfolders
   and files, as rows or tiles — in the same order as the file explorer,
   including a custom order from a plugin such as
@@ -93,13 +131,6 @@ History begins at 1.5.0. For releases before 1.5.0, see the
   browser you can walk the whole tree in (Ctrl/Cmd-click keeps it open while
   opening notes), or, with *Opening a subfolder* set to *In the card*, walks
   the card itself into it (#329).
-
-- **A card for the Vault Pet plugin.** Shows
-  [Vault Pet](https://github.com/elliott-json-park/obsidian-vault-pet)'s pet
-  card or its whole pet house on the board, drawn by the plugin itself — so
-  the pet animates and can be petted, and Hearth keeps no copy of its data.
-  Find it in the "Add card" picker's Fun section. Hearth's own *Pet* card is
-  unchanged.
 
 - **The Periodic note card reads from Journals.** A new *Source* setting
   points the card at the
@@ -128,23 +159,17 @@ History begins at 1.5.0. For releases before 1.5.0, see the
   between 600 and 700 pixels now stacks — set 600 to keep the old behaviour
   (#316, #326).
 
+- **Hearth speaks German.** A full `de` locale joins English and Simplified
+  Chinese: every string Hearth draws comes out in German when Obsidian's own
+  display language is German, with no setting of its own. Anything
+  untranslated falls back to English (#312).
+
 ### Changed
 
-- **A shorter, visual setup wizard.** First-run setup is three steps instead of
-  six: what the vault is for (with the plugins Hearth found), the look — design,
-  background and card style, each shown as a small painting — and a scale
-  preview of the board about to be built. The boards it builds have no empty
-  cards and no holes: working cards in a main column, small ones (a switchable
-  clock, calendar, weather, statistics) in a side column, and cards that need a
-  feed or a place ask for it in the wizard instead of arriving unconfigured.
-
-- **Smaller touches.**
-  - A dashboard can be deleted from its own settings, not only from a
-    right-click.
-  - The Ko-fi button is a filled pill in Ko-fi's red, with a cup that wobbles
-    under the pointer (unless you've asked for less motion).
-  - Two long-retired settings fields (`commandId`, `use24Hour`) are gone from
-    the code; old `data.json` files still upgrade in place.
+- **Two long-retired settings fields are gone from the code.** A mobile action
+  button's pre-1.9.0 `commandId` and a clock card's `use24Hour` were already
+  folded into their replacements on load; the duplicate reads are gone and the
+  folds now have tests. Old `data.json` files still upgrade in place.
 
 ### Fixed
 
@@ -153,11 +178,6 @@ History begins at 1.5.0. For releases before 1.5.0, see the
   Obsidian's search pane, and a graph the graph view with its saved filters. A
   bookmarked heading or block opens right there instead of at the top of the
   note, and the card now updates as soon as your bookmarks change (#327).
-
-- **Settings keep your place.** Flipping a toggle or editing a list halfway
-  down Hearth's settings, a card's or board's settings, or the setup wizard no
-  longer throws the pane back to the top. Long category names in the gallery
-  and the add-card picker wrap instead of being cut off.
 
 - **The tab bar no longer flickers on macOS with a translucent window.** The
   cards' frosted glass stands down while the translucent window is on;
@@ -171,9 +191,6 @@ History begins at 1.5.0. For releases before 1.5.0, see the
 - **The board no longer wobbles sideways on a phone.** The board can't be
   dragged horizontally any more, and a long one-word title wraps instead of
   pushing past the edge (#326).
-
-- **A board set to *Hearth default* keeps it.** Choosing it in a board's own
-  background settings painted nothing and was forgotten on restart.
 
 
 ## [3.1.0]
