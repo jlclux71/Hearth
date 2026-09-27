@@ -107,6 +107,7 @@ History begins at 1.5.0. For releases before 1.5.0, see the
     right-click.
   - The Ko-fi button is a filled pill in Ko-fi's red, with a cup that wobbles
     under the pointer (unless you've asked for less motion).
+  - The folder browser fills its columns row by row, left to right.
 
 ### Fixed
 
