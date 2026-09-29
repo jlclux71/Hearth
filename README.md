@@ -570,7 +570,7 @@ npm run typecheck
 To test in a vault, symlink or copy `main.js`, `manifest.json` and `styles.css`
 into `<vault>/.obsidian/plugins/hearth/`.
 
-**Translations** — Hearth speaks English, Simplified Chinese and German,
+**Translations** — Hearth speaks English, Simplified Chinese, German and French,
 following Obsidian's display language. User-facing strings live in
 [`src/locales/`](src/locales/). English (`en.ts`) is the source of truth; copy
 it, translate the values and register the file. See [`src/locales/README.md`](src/locales/README.md).

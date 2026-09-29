@@ -10,6 +10,7 @@ truth; every other locale is type-checked against it.
 | --- | --- | --- |
 | `en` | English (source of truth) | [`en.ts`](en.ts) |
 | `de` | German — Deutsch | [`de.ts`](de.ts) |
+| `fr` | French — Français | [`fr.ts`](fr.ts) |
 | `zh` | Simplified Chinese — 简体中文 | [`zh.ts`](zh.ts) |
 
 ## How it works
