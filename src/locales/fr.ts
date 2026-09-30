@@ -36,8 +36,8 @@ export const fr: Translations = {
 		operonWriteFailed: (reason: string) => `Hearth : Operon a refusé la modification — ${reason}`,
 		operonCreateFailed: (reason: string, where: string) =>
 			`Hearth : Operon a refusé de créer la tâche — ${reason} ${where} ` +
-			"Modifiez-le dans les réglages d'Operon, ou choisissez une autre cible sous « Nouvelles tâches » " +
-			"dans les réglages de cette carte.",
+			"Modifiez-le dans les paramètres d'Operon, ou choisissez une autre cible sous « Nouvelles tâches » " +
+			"dans les paramètres de cette carte.",
 		operonWriteUnknown: (reason: string) =>
 			`Hearth : Operon n'a pas pu confirmer si la modification a été appliquée (${reason}). ` +
 			"La carte a été relue — vérifiez la tâche avant de réessayer.",
@@ -45,9 +45,9 @@ export const fr: Translations = {
 			"Hearth : activez le plugin Excalidraw pour créer des dessins.",
 		excalidrawCommandMissing:
 			"Hearth : commande « nouveau dessin » d'Excalidraw introuvable.",
-		enableAudioRecorder: "Hearth : activez le plugin natif Enregistreur audio.",
+		enableAudioRecorder: "Hearth : activez le module principal Enregistreur audio.",
 		couldNotRecordVoice: "Hearth : impossible de démarrer l'enregistrement vocal.",
-		enableDailyNotes: "Hearth : activez le plugin natif Notes quotidiennes.",
+		enableDailyNotes: "Hearth : activez le module principal Notes quotidiennes.",
 		couldNotOpenDaily: "Hearth : impossible d'ouvrir la note quotidienne du jour.",
 		couldNotOpenPeriodic: "Hearth : Periodic Notes n'a pas pu créer cette note.",
 		couldNotCreateJournalNote: "Hearth : Journals n'a pas pu créer cette note.",
@@ -63,7 +63,7 @@ export const fr: Translations = {
 			"Hearth : impossible de marquer l'occurrence de la tâche récurrente comme terminée.",
 		couldNotUndoRecurring:
 			"Hearth : impossible d'annuler l'achèvement de la tâche récurrente.",
-		couldNotAddKanbanCard: "Hearth : impossible d'ajouter la carte au tableau Kanban.",
+		couldNotAddKanbanCard: "Hearth : impossible d'ajouter la carte au Kanban.",
 		couldNotConvertCard: "Hearth : impossible de convertir la carte en note.",
 		templaterNoTemplate: (path: string) =>
 			`Hearth : modèle introuvable : ${path}`,
@@ -109,7 +109,7 @@ export const fr: Translations = {
 			answersHeading: "Réponses instantanées",
 			off: "Désactivé",
 			settingsHint:
-				"Activez ou désactivez les réponses dans Réglages → Recherche, par tableau dans ses réglages, ou par carte de barre de recherche.",
+				"Activez ou désactivez les réponses dans Paramètres → Recherche, par tableau dans ses paramètres, ou par carte de barre de recherche.",
 			tryAria: (example: string) => `Essayer « ${example} »`,
 			openRow: "Astuces de recherche",
 			openRowDesc: "Tout ce que la barre de recherche sait faire",
@@ -185,7 +185,7 @@ export const fr: Translations = {
 			loading: "Chargement…",
 			invalid: "Expression non valide",
 			noQuote: (query: string) => `Aucune donnée de marché pour « ${query} »`,
-			externalOff: "Les appels externes sont désactivés dans les réglages de Hearth",
+			externalOff: "Les appels externes sont désactivés dans les paramètres de Hearth",
 			rate: (from: string, rate: string, to: string) => `1 ${from} = ${rate} ${to}`,
 			days: (n: number) => (Math.abs(n) <= 1 ? `${n} jour` : `${n} jours`),
 			today: "Aujourd'hui",
@@ -285,8 +285,8 @@ export const fr: Translations = {
 		},
 		look: {
 			designHeading: "Design",
-			designNote: "Ce choix s'applique à tout Hearth, pas seulement à ce tableau. Modifiable à tout moment dans Réglages → Hearth → Apparence.",
-			terminalNote: "Le mode Terminal s'applique à tout Hearth et à tous les tableaux. Il ne dessine ni fond d'écran ni surfaces de cartes, il n'y a donc rien d'autre à choisir ici. Il est expérimental : désactivez-le à tout moment dans Réglages → Hearth → Apparence, et les tableaux reviennent dans le design d'origine.",
+			designNote: "Ce choix s'applique à tout Hearth, pas seulement à ce tableau. Modifiable à tout moment dans Paramètres → Hearth → Apparence.",
+			terminalNote: "Le mode Terminal s'applique à tout Hearth et à tous les tableaux. Il ne dessine ni fond d'écran ni surfaces de cartes, il n'y a donc rien d'autre à choisir ici. Il est expérimental : désactivez-le à tout moment dans Paramètres → Hearth → Apparence, et les tableaux reviennent dans le design d'origine.",
 			surfaceHeading: "Cartes",
 			backgroundHeading: "Arrière-plan",
 			color: "Couleur",
@@ -329,7 +329,7 @@ export const fr: Translations = {
 			expressive: {
 				icon: "shapes",
 				name: "Expressif",
-				desc: "Material 3 Expressive dans tout Hearth — cartes, boutons, menus, dialogues et réglages — dans les tons de votre couleur d'accent.",
+				desc: "Material 3 Expressive dans tout Hearth — cartes, boutons, menus, dialogues et paramètres — dans les tons de votre couleur d'accent.",
 			},
 			terminal: {
 				icon: "terminal",
@@ -418,7 +418,7 @@ export const fr: Translations = {
 				tasknotes:
 					"Ajouter une carte Tâches lisant vos tâches TaskNotes, avec les noms de champs et " +
 					"statuts terminés de TaskNotes enregistrés sur la carte elle-même.",
-				kanban: "Ajouter une carte Tâches affichant votre tableau Kanban en colonnes, avec glisser-déposer.",
+				kanban: "Ajouter une carte Tâches affichant votre Kanban en colonnes, avec glisser-déposer.",
 				dataview: "Ajouter une carte Dataview, préremplie d'une requête modifiable.",
 				datacore: "Ajouter une carte Datacore prête pour une requête.",
 				templater:
@@ -427,13 +427,13 @@ export const fr: Translations = {
 				git: "Ajouter une carte Git affichant l'état de votre dépôt, avec boutons commit et synchro.",
 				operon:
 					"Ajouter une carte de tâches Operon, lue via l'API développeur d'Operon. " +
-					"Il vous sera demandé d'approuver Hearth dans les réglages d'Operon au premier " +
+					"Il vous sera demandé d'approuver Hearth dans les paramètres d'Operon au premier " +
 					"chargement de la carte ; d'ici là, elle indique ce qu'elle attend.",
 				bases: "Ajouter une carte intégrant une base de votre coffre.",
 				dailyNotes: "Ajouter une carte affichant la note du jour, modifiable sur place.",
 				bookmarks: "Ajouter une carte listant vos signets.",
 			},
-			taskNotesTitle: "Lu depuis vos réglages TaskNotes, appliqué à cette carte",
+			taskNotesTitle: "Lu depuis vos paramètres TaskNotes, appliqué à cette carte",
 			taskNotesStatus: "Champ de statut",
 			taskNotesDue: "Champ d'échéance",
 			taskNotesPriority: "Champ de priorité",
@@ -458,8 +458,8 @@ export const fr: Translations = {
 			calloutTitle: "Un point de départ, pas un modèle figé",
 			calloutHint:
 				"Chaque carte peut être déplacée, redimensionnée, reconfigurée ou supprimée avec Organiser " +
-				"(en haut à droite du tableau) ; Réglages → Hearth s'occupe du reste. Vous pouvez relancer cet " +
-				"assistant à tout moment depuis Réglages → À propos.",
+				"(en haut à droite du tableau) ; Paramètres → Hearth s'occupe du reste. Vous pouvez relancer cet " +
+				"assistant à tout moment depuis Paramètres → À propos.",
 			clock: "Horloge",
 			clockDesc: "Une petite horloge et un message d'accueil en haut de la colonne latérale.",
 			more: "Titre et en-tête",
@@ -499,7 +499,7 @@ export const fr: Translations = {
 				dailyNotes: "Notes quotidiennes est activé",
 				tasks: "Tâches et to-do",
 				tasknotes: "Configuré pour TaskNotes",
-				kanban: "Lecture de votre tableau Kanban",
+				kanban: "Lecture de votre Kanban",
 				planning: "Planning et calendrier",
 				browsing: "Retrouver mes notes",
 				bookmarks: "Signets est activé",
@@ -542,8 +542,8 @@ export const fr: Translations = {
 	dashboard: {
 		addCard: "Ajouter une carte",
 		addCardAria: "Ajouter une carte au tableau de bord",
-		dashboardSettings: "Réglages du tableau",
-		dashboardSettingsAria: "Ouvrir les réglages de ce tableau de bord",
+		dashboardSettings: "Paramètres du tableau",
+		dashboardSettingsAria: "Ouvrir les paramètres de ce tableau de bord",
 		showTitles: "Afficher les titres",
 		hideTitles: "Masquer les titres",
 		showCardHeaders: "Afficher les en-têtes de cartes",
@@ -551,11 +551,11 @@ export const fr: Translations = {
 		doneArranging: "Terminer",
 		finishArranging: "Terminer l'organisation des cartes",
 		moveResize: "Déplacer et redimensionner les cartes",
-		cardSettings: "Réglages de la carte",
-		removeCard: "Supprimer la carte",
-		removeCardTitle: "Supprimer la carte ?",
+		cardSettings: "Paramètres de la carte",
+		removeCard: "Retirer la carte",
+		removeCardTitle: "Retirer la carte ?",
 		removeCardMessage: (name: string) => `Retirer « ${name} » du tableau de bord ?`,
-		removeCardConfirm: "Supprimer",
+		removeCardConfirm: "Retirer",
 		thisCard: "cette carte",
 		expandCard: "Déplier la carte",
 		collapseCard: "Replier la carte",
@@ -574,7 +574,7 @@ export const fr: Translations = {
 		copySuffix: (name: string) => `${name} (copie)`,
 		fallbackName: "Tableau de bord",
 		menu: {
-			settings: "Réglages du tableau…",
+			settings: "Paramètres du tableau…",
 			duplicate: "Dupliquer",
 			exportBoard: "Exporter le tableau…",
 			importBoard: "Importer un tableau…",
@@ -585,7 +585,7 @@ export const fr: Translations = {
 			`Supprimer « ${name} » et ses ${count} carte(s) ? Action irréversible.`,
 		deleteConfirm: "Supprimer",
 		modal: {
-			title: "Réglages du tableau",
+			title: "Paramètres du tableau",
 			deleteDashboard: "Supprimer le tableau",
 			tabs: {
 				general: "Général",
@@ -633,18 +633,18 @@ export const fr: Translations = {
 				"Une icône Lucide (ex. « home », « star », « layout-dashboard ») — parcourez la collection ou tapez un id. Prioritaire sur l'emoji ci-dessus.",
 			linkedWorkspace: "Espace de travail lié",
 			linkedWorkspaceDesc:
-				"Basculer automatiquement sur ce tableau quand cet espace de travail se charge. Nécessite le plugin natif Espaces de travail.",
+				"Basculer automatiquement sur ce tableau quand cet espace de travail se charge. Nécessite le module principal Espaces de travail.",
 			linkedWorkspaceNone: "Aucun",
 			mobileDefault: "Par défaut sur mobile",
 			mobileDefaultDesc:
 				"Ouvrir ce tableau quand Hearth se charge sur téléphone ou tablette. Un seul tableau peut être le tableau mobile par défaut ; l'activer le retire des autres.",
 			titleVisibility: "Visibilité du titre",
 			titleVisibilityDesc:
-				"Afficher ou masquer uniquement le bloc de titre de ce tableau. Remplace le réglage global.",
-			titleVisibilityDefault: (state: string) => `Réglage global (${state})`,
+				"Afficher ou masquer uniquement le bloc de titre de ce tableau. Remplace le paramètre global.",
+			titleVisibilityDefault: (state: string) => `Paramètre global (${state})`,
 			searchVisibility: "Visibilité de la recherche",
 			searchVisibilityDesc:
-				"Afficher ou masquer la barre de recherche et de commandes, ses résultats et ses filtres sur ce tableau. Remplace le réglage global.",
+				"Afficher ou masquer la barre de recherche et de commandes, ses résultats et ses filtres sur ce tableau. Remplace le paramètre global.",
 			searchVisibilityShow: "Afficher la recherche",
 			searchVisibilityHide: "Masquer la recherche",
 			searchPlaceholder: "Texte indicatif de recherche",
@@ -674,8 +674,8 @@ export const fr: Translations = {
 					: `Suit le coffre, qui en masque ${count}.`,
 			hiddenInstant: "Réponses instantanées",
 			hiddenInstantDesc: "Désactiver les réponses pour les barres de recherche de ce tableau. Les réponses désactivées pour tout le coffre le restent.",
-			hiddenInstantOffVault: "Désactivé pour tout le coffre dans Réglages → Recherche.",
-			hiddenInstantVaultOff: "Les réponses instantanées sont désactivées pour tout le coffre dans Réglages → Recherche.",
+			hiddenInstantOffVault: "Désactivé pour tout le coffre dans Paramètres → Recherche.",
+			hiddenInstantVaultOff: "Les réponses instantanées sont désactivées pour tout le coffre dans Paramètres → Recherche.",
 			stackOnNarrow: "Empiler en format étroit",
 			stackOnNarrowDesc:
 				"Réorganiser ce tableau en une seule colonne pleine largeur quand le panneau est trop étroit pour la disposition libre — un téléphone, ou un panneau divisé étroit.",
@@ -700,7 +700,7 @@ export const fr: Translations = {
 			},
 			skyAnimate: "Animer le ciel",
 			skyAnimateDesc:
-				"Laisser la météo peinte de ce tableau dériver, tomber et scintiller. Le niveau de performance et le réglage « réduire les animations » peuvent toujours la figer.",
+				"Laisser la météo peinte de ce tableau dériver, tomber et scintiller. Le niveau de performance et le paramètre « réduire les animations » peuvent toujours la figer.",
 			skyAnimateStateOn: "animé",
 			skyAnimateStateOff: "figé",
 			skyAnimateOptionOn: "Animer",
@@ -738,14 +738,14 @@ export const fr: Translations = {
 			contentWidth: "Largeur du contenu",
 			fullWidth: "Pleine largeur",
 			fullWidthDesc: "Remplacer la limite de largeur pour ce tableau.",
-			fullWidthDefault: (state: string) => `Réglage global (${state})`,
+			fullWidthDefault: (state: string) => `Paramètre global (${state})`,
 			fullWidthOptionOn: "Remplir le panneau",
 			fullWidthOptionOff: "Limiter la largeur",
 			fullWidthStateOn: "remplir le panneau",
 			fullWidthStateOff: "limitée",
 			fitToPage: "Ajuster à la page",
 			fitToPageDesc: "Remplacer le défilement pour ce tableau.",
-			fitDefault: (state: string) => `Réglage global (${state})`,
+			fitDefault: (state: string) => `Paramètre global (${state})`,
 			fitStateFit: "ajusté",
 			fitStateScroll: "défilement",
 			fitOptionFit: "Tenir sur une page",
@@ -754,8 +754,8 @@ export const fr: Translations = {
 				"Un tableau de plugin remplit toujours le panneau — la vue hébergée l'occupe et gère son propre défilement.",
 			themeColorTarget: "Couleur d'accent sur le titre",
 			themeColorTargetDesc:
-				"Quelles parties du logo de ce tableau suivent la couleur d'icône du thème. Remplace le réglage global pour ce tableau ; les icônes d'onglet et du ruban de Hearth suivent toujours le réglage global.",
-			themeColorTargetDefault: (state: string) => `Réglage global (${state})`,
+				"Quelles parties du logo de ce tableau suivent la couleur d'icône du thème. Remplace le paramètre global pour ce tableau ; les icônes d'onglet et du ruban de Hearth suivent toujours le paramètre global.",
+			themeColorTargetDefault: (state: string) => `Paramètre global (${state})`,
 			themeColorTargetOptions: {
 				none: "Aucune",
 				icon: "L'icône",
@@ -764,7 +764,7 @@ export const fr: Translations = {
 			},
 			compact: "Espacement compact",
 			compactDesc: "Remplacer l'espacement global pour ce tableau.",
-			compactDefault: (state: string) => `Réglage global (${state})`,
+			compactDefault: (state: string) => `Paramètre global (${state})`,
 			compactOptionOn: "Compact",
 			compactOptionOff: "Aéré",
 			compactStateOn: "compact",
@@ -774,9 +774,9 @@ export const fr: Translations = {
 			cardRadius: "Arrondi des coins des cartes",
 			cardBorderWidth: "Bordure des cartes",
 			done: "Terminé",
-			overriding: "Remplace le réglage global.",
+			overriding: "Remplace le paramètre global.",
 			usingGlobal: (value: number | string) =>
-				`Réglage global utilisé (${value}).`,
+				`Paramètre global utilisé (${value}).`,
 			usingDefault: (value: number | string) =>
 				`Valeur par défaut utilisée (${value}).`,
 			usingDefaultText: (value: string) =>
@@ -790,9 +790,9 @@ export const fr: Translations = {
 			bannerHeight: "Hauteur de la bannière",
 			bannerFade: "Fondu du bord inférieur",
 			bannerFullWidth: "Pleine largeur",
-			clearOverride: "Suivre le réglage global",
+			clearOverride: "Suivre le paramètre global",
 		},
-		useGlobal: "Réglage global",
+		useGlobal: "Paramètre global",
 		on: "activé",
 		off: "désactivé",
 		backgroundLayoutOptions: {
@@ -800,7 +800,7 @@ export const fr: Translations = {
 			banner: "Bannière",
 		},
 		backgroundOptions: {
-			default: "Réglage global",
+			default: "Paramètre global",
 			none: "Aucun",
 			hdefault: "Hearth par défaut",
 			harbour: "Village portuaire",
@@ -821,7 +821,7 @@ export const fr: Translations = {
 		resetSlider: "Rétablir la valeur par défaut",
 		resetField: "Rétablir la valeur par défaut",
 		indexSub: "Un écran d'accueil pour votre coffre — recherche, tableau de bord et lanceur en un.",
-		backToIndex: "Retour à tous les réglages",
+		backToIndex: "Retour à tous les paramètres",
 		indexGroups: {
 			lookFeel: "Apparence",
 			howItWorks: "Fonctionnement",
@@ -835,12 +835,12 @@ export const fr: Translations = {
 			behaviour: "Démarrage, ouverture des notes et confidentialité.",
 			mobile: "La disposition empilée sur téléphone et la barre d'actions.",
 			integrations: "TaskNotes, icônes de fichiers et tous les plugins que Hearth lit.",
-			backup: "Exporter et importer votre disposition et vos réglages.",
+			backup: "Exporter et importer votre disposition et vos paramètres.",
 			about: "Version, nouveautés et où signaler un problème.",
 		},
 		sectionError: (name: string) => `La section « ${name} » n'a pas pu être affichée.`,
 		sectionErrorHint:
-			"Ouvrez la console développeur (Cmd/Ctrl+Option+I) pour voir l'erreur, puis signalez-la sur GitHub. Les autres réglages ne sont pas affectés.",
+			"Ouvrez la console développeur (Cmd/Ctrl+Option+I) pour voir l'erreur, puis signalez-la sur GitHub. Les autres paramètres ne sont pas affectés.",
 		tabs: {
 			appearance: "Apparence",
 			search: "Recherche",
@@ -889,7 +889,7 @@ export const fr: Translations = {
 			setupAgainDesc:
 				"Relancez l'assistant de configuration pour générer un autre tableau de bord. Il est toujours " +
 				"ajouté comme nouveau tableau, vos tableaux existants ne sont donc jamais touchés — " +
-				"et tout ce qu'il règle s'applique à ce seul tableau, pas aux réglages " +
+				"et tout ce qu'il règle s'applique à ce seul tableau, pas aux paramètres " +
 				"globaux du coffre.",
 			setupButton: "Lancer la configuration",
 			whatsNew: "Nouveautés",
@@ -918,7 +918,7 @@ export const fr: Translations = {
 			showSearch: "Afficher la section de recherche",
 			showSearchDesc:
 				"Afficher la barre de recherche et de commandes avec ses résultats et ses filtres. " +
-				"Chaque tableau peut remplacer ce choix dans ses réglages.",
+				"Chaque tableau peut remplacer ce choix dans ses paramètres.",
 			title: "Titre",
 			titleDesc: "Le texte affiché en haut de la vue d'accueil.",
 			titleIcon: "Icône du titre",
@@ -927,7 +927,7 @@ export const fr: Translations = {
 				"(parcourez la collection avec le bouton 🔍), un emoji ou un ou deux " +
 				"caractères, le chemin d'une image du coffre (bouton 📷), ou l'URL d'une " +
 				"image sur le web. Laissez vide pour le cristal Hearth. Chaque " +
-				"tableau peut le remplacer dans ses propres réglages.",
+				"tableau peut le remplacer dans ses propres paramètres.",
 			tabIcon: "Icône de l'onglet",
 			tabIconDesc:
 				"Une icône Lucide pour l'en-tête d'onglet et le bouton du ruban de Hearth, à la place " +
@@ -978,7 +978,7 @@ export const fr: Translations = {
 				"modifier ce choix.",
 			newNoteHeading: "Le bouton « Nouvelle note »",
 			newNoteHeadingDesc:
-				"Ce que crée le bouton, et où. Les mêmes réglages pilotent le " +
+				"Ce que crée le bouton, et où. Les mêmes paramètres pilotent le " +
 				"bouton à côté de la barre de recherche, celui d'une carte barre de recherche, et " +
 				"la commande « Créer une note » de Hearth.",
 			newNoteButtonLabel: "Texte du bouton",
@@ -1023,7 +1023,7 @@ export const fr: Translations = {
 			tier: "Niveau de performance",
 			tierDesc:
 				"Chaque niveau inférieur supprime l'élément le plus coûteux suivant. " +
-				"Rien n'est écrasé — vos réglages reviennent exactement tels " +
+				"Rien n'est écrasé — vos paramètres reviennent exactement tels " +
 				"qu'ils étaient quand vous remontez.",
 			tierFull: "Complet — tout activé",
 			tierBalanced: "Équilibré — un ciel plus léger",
@@ -1032,7 +1032,7 @@ export const fr: Translations = {
 			tierFullDesc:
 				"Tous les effets à pleine puissance. Le ciel météo peint est l'élément le plus " +
 				"coûteux : si le tableau fait chauffer votre machine, c'est ce " +
-				"réglage qu'il faut baisser.",
+				"paramètre qu'il faut baisser.",
 			tierBalancedDesc:
 				"Le ciel peint est dessiné à demi-densité — moins de gouttes, d'étoiles, " +
 				"de nuages et de brume. Rien n'est désactivé et rien ne s'arrête " +
@@ -1069,10 +1069,10 @@ export const fr: Translations = {
 			vibrancyFrost:
 				"Le verre givré est désactivé tant que la fenêtre translucide d'Obsidian est active : un " +
 				"flou et la translucidité macOS se mélangent l'un à l'autre sur toute la fenêtre, " +
-				"ce qui fait scintiller la barre d'onglets. Votre réglage de flou est conservé et " +
+				"ce qui fait scintiller la barre d'onglets. Votre paramètre de flou est conservé et " +
 				"revient dès que vous désactivez la fenêtre translucide.",
 			overridden:
-				"Le niveau de performance remplace actuellement ces réglages. Ils sont conservés tels " +
+				"Le niveau de performance remplace actuellement ces paramètres. Ils sont conservés tels " +
 				"quels et reprennent effet quand vous remontez de niveau.",
 		},
 		background: {
@@ -1088,7 +1088,7 @@ export const fr: Translations = {
 			externalCallsDisabled:
 				"Non affiché tant que « Désactiver les appels externes » est actif dans Comportement : " +
 				"cet arrière-plan vient du web. Choisissez plutôt une image du coffre, " +
-				"ou désactivez ce réglage.",
+				"ou désactivez ce paramètre.",
 			opacity: "Opacité",
 			opacityDesc:
 				"À quel point l'arrière-plan transparaît. Plus bas = plus discret.",
@@ -1099,7 +1099,7 @@ export const fr: Translations = {
 				"Remplir toute la vue avec l'arrière-plan, ou l'utiliser en bannière — " +
 				"une bande en haut du tableau, comme une image de couverture " +
 				"au-dessus d'une note — avec les cartes en dessous sur la surface du thème. " +
-				"Chaque tableau peut remplacer ce choix dans ses propres réglages.",
+				"Chaque tableau peut remplacer ce choix dans ses propres paramètres.",
 			layoutLabels: {
 				full: "Arrière-plan complet",
 				banner: "Bannière",
@@ -1171,7 +1171,7 @@ export const fr: Translations = {
 			liveRefreshDesc:
 				"Garder la vue d'accueil à jour quand le coffre change — les cartes Récents, Signets " +
 				"et requêtes enregistrées se mettent à jour sans rouvrir l'onglet. Revenir sur " +
-				"l'onglet Hearth l'actualise toujours, quel que soit ce réglage.",
+				"l'onglet Hearth l'actualise toujours, quel que soit ce paramètre.",
 			liveSettingsSync: "Prendre en compte les changements synchronisés",
 			liveSettingsSyncDesc:
 				"Appliquer les modifications de tableaux faites sur un autre appareil dès que la synchro " +
@@ -1188,13 +1188,13 @@ export const fr: Translations = {
 				"étroit sur ordinateur — afficher les cartes en une seule colonne pleine largeur. " +
 				"Votre disposition n'est pas modifiée et revient en pleine largeur. " +
 				"Chaque carte peut être masquée, réordonnée, redimensionnée ou repliée pour cette " +
-				"colonne depuis ses propres réglages.",
+				"colonne depuis ses propres paramètres.",
 			narrowWidth: "Étroit en dessous de",
 			narrowWidthDesc:
 				"La largeur, en pixels, en dessous de laquelle le tableau est considéré comme étroit. Augmentez-la " +
 				"pour qu'une fenêtre en demi-écran passe à la disposition étroite ; diminuez-la " +
 				"pour garder la disposition libre dans des panneaux plus serrés. Chaque " +
-				"tableau peut remplacer ce réglage.",
+				"tableau peut remplacer ce paramètre.",
 			mobilePerformanceTier: "Niveau de performance sur mobile",
 			mobilePerformanceTierDesc:
 				"Le niveau utilisé sur téléphone et tablette, où le ciel animé et " +
@@ -1267,13 +1267,13 @@ export const fr: Translations = {
 			headingDesc:
 				"Tout ce avec quoi Hearth peut fonctionner, installé ou non. " +
 				"La plupart des intégrations ne demandent aucune configuration — les autres indiquent où se " +
-				"trouvent leurs réglages.",
+				"trouvent leurs paramètres.",
 			groups: {
 				plugin: "Plugins communautaires",
 				pluginDesc: "Hearth les détecte automatiquement dès qu'ils sont activés.",
-				core: "Plugins natifs d'Obsidian",
+				core: "Modules principaux d'Obsidian",
 				coreDesc:
-					"Intégrés à Obsidian. Activez-les dans Réglages → Plugins natifs si une " +
+					"Intégrés à Obsidian. Activez-les dans Paramètres → Modules principaux si une " +
 					"carte indique qu'il en manque un.",
 				service: "Services externes",
 				serviceDesc:
@@ -1295,10 +1295,10 @@ export const fr: Translations = {
 				always: "Rien à installer.",
 			},
 			where: {
-				section: "Réglages plus bas dans cet onglet.",
-				tab: (tab: string) => `Réglages dans ${tab}.`,
+				section: "Paramètres plus bas dans cet onglet.",
+				tab: (tab: string) => `Paramètres dans ${tab}.`,
 				card: "Se configure sur la carte elle-même, dans votre tableau de bord.",
-				pluginSettings: "Utilise les réglages de ce plugin — rien à régler dans Hearth.",
+				pluginSettings: "Utilise les paramètres de ce plugin — rien à régler dans Hearth.",
 				none: "Rien à configurer.",
 			},
 			install: "Installer",
@@ -1496,7 +1496,7 @@ export const fr: Translations = {
 			headingDesc:
 				"Noms des champs lus par les cartes Tâches en mode TaskNotes. TaskNotes n'a pas " +
 				"d'API stable pour les autres plugins, donc Hearth lit directement son frontmatter " +
-				"— faites-les correspondre aux champs définis dans les réglages de TaskNotes " +
+				"— faites-les correspondre aux champs définis dans les paramètres de TaskNotes " +
 				"(les valeurs par défaut ci-dessous sont celles de TaskNotes).",
 			statusField: "Champ de statut",
 			statusFieldDesc: "Champ de frontmatter lu pour le statut d'une tâche.",
@@ -1517,7 +1517,7 @@ export const fr: Translations = {
 			fields: "Champs affichés sur une tâche",
 			fieldsDesc:
 				"Les champs affichés par toutes les cartes Tâches. Une carte peut définir les siens " +
-				"depuis ses propres réglages.",
+				"depuis ses propres paramètres.",
 		},
 		fileIcons: {
 			heading: "Icônes de fichiers / Iconic / Iconize",
@@ -1537,7 +1537,7 @@ export const fr: Translations = {
 			property: "Propriété de frontmatter d'Iconize",
 			propertyDesc:
 				"La propriété où Iconize stocke l'icône d'une note, pour les icônes définies via " +
-				"le frontmatter plutôt que son menu. Faites-la correspondre au réglage d'Iconize " +
+				"le frontmatter plutôt que son menu. Faites-la correspondre au paramètre d'Iconize " +
 				"si vous l'avez renommée (par défaut « icon »).",
 		},
 		operon: {
@@ -1557,7 +1557,7 @@ export const fr: Translations = {
 				"L'API développeur d'Operon est réservée à l'ordinateur et nécessite Obsidian 1.12.2 ou plus récent.",
 			statusBooting: "Operon fonctionne mais démarre encore.",
 			statusPending:
-				"En attente d'approbation. Ouvrez Réglages → Operon → Core → General → " +
+				"En attente d'approbation. Ouvrez Paramètres → Operon → Core → General → " +
 				"Developer API Integrations et approuvez Hearth.",
 			statusSuspended:
 				"Accès suspendu. Vérifiez la demande d'accès en attente de Hearth dans les " +
@@ -1572,7 +1572,7 @@ export const fr: Translations = {
 			install: "Ouvrir Operon dans les plugins communautaires",
 			writes: "Autoriser les modifications",
 			writesDesc:
-				"Permet à la carte tableau de changer le statut d'une tâche par glisser-déposer, et " +
+				"Permet à la carte Kanban de changer le statut d'une tâche par glisser-déposer, et " +
 				"ajoute un « + » pour en créer une. Operon décide où va une nouvelle tâche et " +
 				"si un déplacement est autorisé ; Hearth ne fait que demander. L'activer élargit ce que " +
 				"Hearth demande, vous devrez donc l'approuver à nouveau dans les " +
@@ -1633,15 +1633,15 @@ export const fr: Translations = {
 				"Les cartes Expressives reposent sur une surface tonale opaque aux grands coins arrondis : opacité, flou, arrondi et bordure ne s'appliquent donc qu'aux cartes Classiques.",
 			cardDesign: "Design",
 			cardDesignDesc:
-				"Comment Hearth est dessiné : Classique, ou Material 3 Expressive — conteneurs tonals dans votre couleur d'accent, pastilles et formes douces, typographie plus marquée. Expressive s'applique à toute l'interface de Hearth : les cartes, les boutons du tableau, chaque dialogue et menu, et ce panneau de réglages. Un tableau ou une carte peut toujours choisir pour lui-même ; les cartes dont le contenu vous appartient (notes, intégrations, pages web) gardent ce contenu tel quel et ne prennent que le cadre Expressive.",
+				"Comment Hearth est dessiné : Classique, ou Material 3 Expressive — conteneurs tonals dans votre couleur d'accent, pastilles et formes douces, typographie plus marquée. Expressive s'applique à toute l'interface de Hearth : les cartes, les boutons du tableau, chaque dialogue et menu, et ce panneau de paramètres. Un tableau ou une carte peut toujours choisir pour lui-même ; les cartes dont le contenu vous appartient (notes, intégrations, pages web) gardent ce contenu tel quel et ne prennent que le cadre Expressive.",
 			designClassicDesc: "Surfaces discrètes et bordures fines — Hearth tel qu'il a toujours été.",
 			designExpressiveDesc: "Material 3 Expressive partout : couleurs tonales issues de votre accent, pastilles et formes douces, typographie grasse.",
 			designInUse: "Utilisé",
 			cards: "Cartes",
 			cardsDesc:
 				"Ajoutez et configurez les cartes sur le tableau lui-même : ouvrez la vue d'accueil, " +
-				"cliquez sur Organiser, puis utilisez Ajouter une carte, Réglages du tableau et le bouton " +
-				"de réglages de chaque carte.",
+				"cliquez sur Organiser, puis utilisez Ajouter une carte, Paramètres du tableau et le bouton " +
+				"de paramètres de chaque carte.",
 		},
 		layout: {
 			heading: "Import / export",
@@ -1656,21 +1656,21 @@ export const fr: Translations = {
 				"Ouvrir un fichier Hearth — un tableau de bord, une disposition ou une sauvegarde complète. Son contenu vous est présenté avant tout changement, et un tableau seul est ajouté à côté des vôtres sans rien remplacer.",
 			export: "Exporter la disposition",
 			exportDesc:
-				"Télécharger tous les tableaux de bord ainsi que les réglages de grille et de disposition en fichier JSON.",
+				"Télécharger tous les tableaux de bord ainsi que les paramètres de grille et de disposition en fichier JSON.",
 			exportButton: "Exporter le fichier",
 			exportMobileTooltip:
 				"Sur mobile, le fichier est enregistré à la racine de votre coffre.",
 			importButton: "Importer un fichier",
-			exportSettings: "Exporter les réglages",
+			exportSettings: "Exporter les paramètres",
 			exportSettingsDesc:
-				"Télécharger tous les réglages de Hearth — la disposition complète plus l'en-tête, l'arrière-plan, " +
+				"Télécharger tous les paramètres de Hearth — la disposition complète plus l'en-tête, l'arrière-plan, " +
 				"le comportement, l'apparence et les options TaskNotes — en fichier de sauvegarde JSON.",
 		},
 	},
 
 	// ---- Card settings editor ------------------------------------------
 	editors: {
-		title: "Réglages de la carte",
+		title: "Paramètres de la carte",
 		iconHelp:
 			"Saisissez un id d'icône Lucide (ex. « home », « star », « calendar ») — parcourez-les sur " +
 			"lucide.dev/icons. Vous pouvez aussi saisir le chemin d'une image du coffre (ex. " +
@@ -1703,10 +1703,10 @@ export const fr: Translations = {
 			autoPlaceholder: "Auto",
 		},
 		resetSize: "Rétablir la taille par défaut",
-		removeCard: "Supprimer la carte",
-		removeCardTitle: "Supprimer la carte ?",
+		removeCard: "Retirer la carte",
+		removeCardTitle: "Retirer la carte ?",
 		removeCardMessage: (name: string) => `Retirer « ${name} » du tableau de bord ?`,
-		removeCardConfirm: "Supprimer",
+		removeCardConfirm: "Retirer",
 		thisCard: "cette carte",
 		done: "Terminé",
 		kinds: {
@@ -1912,7 +1912,7 @@ export const fr: Translations = {
 			openButtonDesc: "Afficher un bouton pour ouvrir la note du jour dans l'éditeur.",
 			info: "Notes quotidiennes",
 			infoDesc:
-				"La note du jour est trouvée d'après le format de date et le dossier du plugin natif Notes quotidiennes. La carte se met à jour en direct pendant l'édition.",
+				"La note du jour est trouvée d'après le format de date et le dossier du module principal Notes quotidiennes. La carte se met à jour en direct pendant l'édition.",
 		},
 		periodic: {
 			source: "Source",
@@ -1962,7 +1962,7 @@ export const fr: Translations = {
 		},
 		web: {
 			url: "URL",
-			urlPlaceholder: "https://exemple.com",
+			urlPlaceholder: "https://example.com",
 			trusted: "Site de confiance",
 			trustedDesc:
 				"Autoriser la page à accéder à sa propre origine (cookies, stockage). N'activez " +
@@ -2052,7 +2052,7 @@ export const fr: Translations = {
 			operonTasksDesc:
 				"Marquer les jours ayant une tâche Operon à échéance, et lister ces tâches dans " +
 				"l'agenda. Lit via l'API développeur d'Operon, il faut donc qu'Operon " +
-				"soit approuvé dans Réglages → Hearth → Intégrations. Les tâches seulement " +
+				"soit approuvé dans Paramètres → Hearth → Intégrations. Les tâches seulement " +
 				"planifiées (sans échéance) ne sont pas incluses.",
 			operonTaskColor: "Couleur des tâches Operon",
 			operonTaskColorDesc: "Couleur des marqueurs de tâches. Par défaut, la couleur d'accent.",
@@ -2155,7 +2155,7 @@ export const fr: Translations = {
 			taskNotesTimeblocks: "Blocs horaires",
 			taskNotesTimeblocksDesc: "Les blocs horaires écrits dans vos notes quotidiennes.",
 			taskNotesFollows: (on: boolean) =>
-				`TaskNotes a actuellement ce réglage ${on ? "activé" : "désactivé"}.`,
+				`TaskNotes a actuellement ce paramètre ${on ? "activé" : "désactivé"}.`,
 			taskNotesFollowReset: "Suivre TaskNotes",
 			taskNotesCompleted: "Afficher les terminées",
 			taskNotesCompletedDesc: "Garder les tâches terminées sur le calendrier, barrées.",
@@ -2172,7 +2172,7 @@ export const fr: Translations = {
 				`${count} événement${count <= 1 ? "" : "s"} chargé${count <= 1 ? "" : "s"}.`,
 			taskNotesSubPending: "Pas encore chargé — actualisez ci-dessous.",
 			taskNotesSubDisabled: "Désactivé dans TaskNotes.",
-			taskNotesSubBlocked: "Non récupéré : les appels externes sont désactivés dans les réglages de Hearth.",
+			taskNotesSubBlocked: "Non récupéré : les appels externes sont désactivés dans les paramètres de Hearth.",
 			taskNotesSubFailed: (reason: string) => `Chargement impossible : ${reason}`,
 			taskNotesSubNotCalendar: "la réponse n'était pas un flux iCalendar.",
 			taskNotesSubMissingFile: "ce fichier n'est pas dans le coffre.",
@@ -2345,7 +2345,7 @@ export const fr: Translations = {
 			placeholder: "Texte indicatif",
 			placeholderDesc:
 				"Texte affiché dans le champ vide. Laissez vide pour utiliser celui de " +
-				"Réglages → Recherche.",
+				"Paramètres → Recherche.",
 			filters: "Ligne de filtres",
 			filtersDesc:
 				"Afficher les filtres de type de fichier sous le champ, les mêmes que la barre de " +
@@ -2354,12 +2354,12 @@ export const fr: Translations = {
 			filterTypesDesc:
 				"Les filtres proposés par cette carte. Un filtre n'apparaît que si le coffre " +
 				"contient réellement ce type de fichier.",
-			filterTypeGlobalOff: "Masqué pour toutes les barres de recherche dans Réglages → Filtres.",
+			filterTypeGlobalOff: "Masqué pour toutes les barres de recherche dans Paramètres → Filtres.",
 			instantAnswers: "Réponses instantanées",
 			instantAnswersDesc:
 				"Désactiver les réponses pour cette barre de recherche. Les réponses désactivées sur le tableau ou pour tout le coffre le restent ici.",
 			instantAnswerOff: "Désactivé sur ce tableau ou pour tout le coffre.",
-			instantAnswersVaultOff: "Les réponses instantanées sont désactivées pour tout le coffre dans Réglages → Recherche.",
+			instantAnswersVaultOff: "Les réponses instantanées sont désactivées pour tout le coffre dans Paramètres → Recherche.",
 			button: "Bouton",
 			buttonDesc:
 				"Un bouton d'action à côté du champ : créer une note, ou chercher sur le " +
@@ -2384,7 +2384,7 @@ export const fr: Translations = {
 				"fixe en pixels, une carte trop petite défilant alors. Les boutons qui remplissent cessent " +
 				"de rétrécir quand ils deviendraient trop petits pour être utilisés, dans les deux sens, et une " +
 				"carte trop petite pour eux à cette taille défile aussi. Les cartes créées avant " +
-				"ce réglage restent en taille fixe jusqu'à ce que vous les changiez ; " +
+				"ce paramètre restent en taille fixe jusqu'à ce que vous les changiez ; " +
 				"chaque style garde ses propres tailles, revenir en arrière restaure donc ce que vous " +
 				"aviez.",
 			sizingScale: "Remplir la carte",
@@ -2488,18 +2488,18 @@ export const fr: Translations = {
 			source: "Source",
 			sourceDesc:
 				"Les cases à cocher Markdown fonctionnent partout. TaskNotes lit les notes de tâches " +
-				"de ce plugin via le frontmatter (noms de champs configurables dans Réglages → " +
+				"de ce plugin via le frontmatter (noms de champs configurables dans Paramètres → " +
 				"Hearth, car TaskNotes n'a pas d'API interrogeable par d'autres plugins). " +
-				"Kanban lit une seule note de tableau du plugin Kanban, une colonne par titre.",
+				"Kanban lit une seule note du plugin Kanban, une colonne par titre.",
 			sourceCheckbox: "Cases à cocher Markdown",
 			sourceTaskNotes: "Plugin TaskNotes",
 			sourceKanban: "Plugin Kanban",
-			kanbanBoard: "Note du tableau",
+			kanbanBoard: "Note du Kanban",
 			kanbanBoardDesc:
 				"Le tableau du plugin Kanban à lire. Laissez vide pour détecter automatiquement la première " +
 				"note concernée ayant une clé de frontmatter « kanban-plugin ».",
 			kanbanBoardPlaceholder: "Détection automatique",
-			pickBoard: "Choisir un tableau Kanban",
+			pickBoard: "Choisir un Kanban",
 			kanbanExtended: "Dates et priorités",
 			kanbanExtendedDesc:
 				"Lire les dates, la priorité et les marques de répétition écrites sur chaque carte " +
@@ -2512,9 +2512,9 @@ export const fr: Translations = {
 				"case à cocher (compatible avec le plugin obsidian-tasks) pour les afficher en " +
 				"indicateurs, trier la liste, et les modifier depuis le menu contextuel " +
 				"de l'élément. Désactivé : les cases sont lues comme du texte simple.",
-			checkboxStatuses: "États des tâches (colonnes du tableau)",
+			checkboxStatuses: "États des tâches (colonnes du Kanban)",
 			checkboxStatusesDesc:
-				"Les états de case à cocher affichés en colonnes sur un tableau Kanban, un par ligne " +
+				"Les états de case à cocher affichés en colonnes sur un Kanban, un par ligne " +
 				"sous la forme « [symbole] Libellé » — le symbole est le caractère dans « - [ ] ». Ajoutez " +
 				"« (done) » pour marquer un état comme terminé. Glisser une carte dans une colonne écrit " +
 				"son symbole. Laissez vide pour l'ensemble par défaut (À faire, En cours, Terminé).",
@@ -2538,17 +2538,17 @@ export const fr: Translations = {
 				"les emojis sur le lien du tableau.",
 			newTaskAsNote: "Nouvelles tâches en notes",
 			newTaskAsNoteDesc:
-				"Créer chaque nouvelle carte directement comme une note à part (un lien sur le tableau) " +
+				"Créer chaque nouvelle carte directement comme une note à part (un lien sur le Kanban) " +
 				"au lieu d'une case à cocher — en appliquant le modèle et les options " +
 				"métadonnées-vers-frontmatter ci-dessus, comme Convertir en note.",
 			layout: "Disposition",
 			layoutDesc:
-				"Liste, ou tableau Kanban groupé par statut. Sur le tableau, glissez les cartes " +
+				"Liste, ou Kanban groupé par statut. Sur le Kanban, glissez les cartes " +
 				"entre colonnes, glissez les en-têtes de colonne pour les réordonner, utilisez l'œil " +
 				"d'une colonne pour la masquer, et sa coche pour qu'elle termine automatiquement les cartes. " +
 				"Clic droit sur une carte pour la convertir en note à part.",
 			layoutList: "Liste",
-			layoutKanban: "Tableau Kanban",
+			layoutKanban: "Kanban",
 			kanbanColumns: "Colonnes Kanban",
 			kanbanHidden: (columns: string) => `Masquées : ${columns}`,
 			kanbanDoneColumns: (columns: string) => `Achèvement auto : ${columns}`,
@@ -2559,12 +2559,12 @@ export const fr: Translations = {
 			doneStatusesDesc:
 				"Source TaskNotes : quelles valeurs de statut sont considérées comme terminées (masquées " +
 				"sauf si « Afficher les terminées » est actif, et barrées si affichées), une par " +
-				"ligne. Laissez vide pour n'utiliser que la valeur « terminé » de Réglages → Hearth. " +
+				"ligne. Laissez vide pour n'utiliser que la valeur « terminé » de Paramètres → Hearth. " +
 				"Ajoutez par ex. « canceled » pour compter aussi les tâches annulées comme terminées.",
 			doneStatusesPlaceholder: "done\ncanceled",
 			fields: "Champs",
 			fieldsFollowGlobal:
-				"Suit les champs de Réglages → Hearth → Intégrations. Activez " +
+				"Suit les champs de Paramètres → Hearth → Intégrations. Activez " +
 				"pour donner à cette carte ses propres champs.",
 			fieldsCustomize: "Personnaliser…",
 			fieldsTitle: "Champs de tâche",
@@ -2623,7 +2623,7 @@ export const fr: Translations = {
 			fieldNoKeys: "Aucune clé",
 			fieldAddKey: "Ajouter une clé",
 			fieldAddKeyDesc:
-				"Les valeurs propres à Hearth couvrent la priorité d'une case à cocher, une colonne de tableau " +
+				"Les valeurs propres à Hearth couvrent la priorité d'une case à cocher, une colonne Kanban " +
 				"et les dates analysées ; une propriété lit n'importe quoi dans votre frontmatter.",
 			fieldAddBuiltin: "Ce que Hearth lit",
 			fieldAddProperty: "Propriété de frontmatter",
@@ -2681,7 +2681,7 @@ export const fr: Translations = {
 			},
 			sourceNames: {
 				status: "Statut (TaskNotes)",
-				column: "Colonne du tableau (Kanban)",
+				column: "Colonne Kanban",
 				priority: "Priorité",
 				start: "Date de début",
 				scheduled: "Date planifiée",
@@ -2691,7 +2691,7 @@ export const fr: Translations = {
 			},
 			showCompleted: "Afficher les terminées",
 			showCompletedKanbanDesc:
-				"Les tâches terminées apparaissent toujours dans la colonne Terminé d'un tableau Kanban.",
+				"Les tâches terminées apparaissent toujours dans la colonne Terminé d'un Kanban.",
 			maxTasks: "Tâches affichées max",
 			maxTasksDesc: "Triées par échéance (en retard/plus proches d'abord), puis par fichier.",
 			folders: "Dossiers",
@@ -2844,8 +2844,8 @@ export const fr: Translations = {
 			commitMessagePlaceholder: "sauvegarde du coffre : {{date}}",
 			skipConfirm: "Ignorer les confirmations",
 			skipConfirmDesc:
-				"Exécuter immédiatement les actions d'annulation au lieu de demander d'abord. Les " +
-				"modifications annulées ne peuvent pas être récupérées.",
+				"Exécuter immédiatement les actions d'abandon au lieu de demander d'abord. Les " +
+				"modifications abandonnées ne peuvent pas être récupérées.",
 			display: "Affichage",
 			changeLimit: "Fichiers modifiés affichés",
 			changeLimitDesc: "0 liste tous les fichiers modifiés.",
@@ -2863,7 +2863,7 @@ export const fr: Translations = {
 			view: "Vue",
 			viewDesc: "Ce que cette carte affiche depuis Operon.",
 			viewList: "Liste de tâches",
-			viewBoard: "Tableau des statuts",
+			viewBoard: "Kanban des statuts",
 			viewAgenda: "Agenda",
 			viewTimer: "Minuteur",
 			scope: "Portée",
@@ -2879,7 +2879,7 @@ export const fr: Translations = {
 			createAs: "Nouvelles tâches",
 			createAsDesc:
 				"Ce que le « + » de la carte demande à Operon de créer. Le défaut d'Operon suit ses propres " +
-				"réglages ; les deux autres choisissent laquelle de ses cibles configurées utiliser — " +
+				"paramètres ; les deux autres choisissent laquelle de ses cibles configurées utiliser — " +
 				"utile quand l'une d'elles est introuvable. L'emplacement final de la tâche " +
 				"reste décidé par Operon dans tous les cas.",
 			createAsDefault: "Défaut d'Operon",
@@ -2888,7 +2888,7 @@ export const fr: Translations = {
 			agendaDays: "Jours à venir",
 			agendaDaysDesc: "Combien de jours l'agenda couvre, aujourd'hui compris.",
 			count: "Tâches affichées",
-			countDesc: "Nombre maximal de tâches dans la liste, ou par colonne du tableau.",
+			countDesc: "Nombre maximal de tâches dans la liste, ou par colonne du Kanban.",
 			pipelines: "Pipelines",
 			pipelinesDesc: "Limiter à ces pipelines Operon. Aucune sélection = tous.",
 			statuses: "Statuts",
@@ -2904,7 +2904,7 @@ export const fr: Translations = {
 			textDesc: "Uniquement les tâches dont la description contient ce texte.",
 			sort: "Tri",
 			sortDesc:
-				"Ordre de la liste et de chaque colonne du tableau. Les tâches ouvertes viennent toujours " +
+				"Ordre de la liste et de chaque colonne du Kanban. Les tâches ouvertes viennent toujours " +
 				"avant les terminées. Le bouton inverse le sens.",
 			sortSmart: "Intelligent (date, priorité, ancienneté)",
 			sortDue: "Date",
@@ -2923,7 +2923,7 @@ export const fr: Translations = {
 		rss: {
 			feeds: "Flux",
 			namePlaceholder: "Nom (facultatif)",
-			urlPlaceholder: "https://exemple.com/feed.xml",
+			urlPlaceholder: "https://example.com/feed.xml",
 			addFeed: "Ajouter un flux",
 			removeFeed: "Retirer le flux",
 			github: "Ajouter depuis GitHub",
@@ -3056,7 +3056,7 @@ export const fr: Translations = {
 				"Recherche par nom — Hearth enregistre les coordonnées sur la carte, cette " +
 				"recherche n'a donc lieu qu'une fois.",
 			searchDisabled:
-				"La recherche de lieu est indisponible tant que les appels externes sont désactivés dans les réglages " +
+				"La recherche de lieu est indisponible tant que les appels externes sont désactivés dans les paramètres " +
 				"de Hearth. Vous pouvez toujours saisir des coordonnées ci-dessous.",
 			searchPlaceholder: "Paris, Lyon, Marseille…",
 			searchButton: "Chercher",
@@ -3143,7 +3143,7 @@ export const fr: Translations = {
 		jira: {
 			host: "Hôte Jira",
 			hostDesc: "L'origine du site Jira. HTTPS est obligatoire pour envoyer un jeton d'accès personnel.",
-			hostPlaceholder: "https://jira.exemple.com",
+			hostPlaceholder: "https://jira.example.com",
 			pat: "Jeton d'accès personnel",
 			patDesc: "Jeton PAT (Bearer) utilisé pour cette carte. Stocké dans les données du plugin Hearth.",
 			apiBase: "Chemin de base de l'API",
@@ -3157,7 +3157,7 @@ export const fr: Translations = {
 			noFavoriteFilters: "Jira n'a renvoyé aucun filtre favori.",
 			loadFailed: "Impossible de charger les filtres Jira. Vérifiez l'hôte, le chemin de l'API et le jeton.",
 			externalCallsDisabled:
-				"Les filtres favoris ne peuvent pas être chargés tant que les appels externes sont désactivés dans les réglages de Hearth.",
+				"Les filtres favoris ne peuvent pas être chargés tant que les appels externes sont désactivés dans les paramètres de Hearth.",
 			controls: "Contrôles de filtre",
 			maxResults: "Résultats max",
 			maxResultsDesc: "Le nombre maximal de tickets filtrés à afficher, jusqu'à 200.",
@@ -3169,7 +3169,7 @@ export const fr: Translations = {
 		leaf: {
 			view: "Vue à héberger",
 			viewDesc:
-				"Une vue de panneau latéral enregistrée par un plugin natif ou communautaire " +
+				"Une vue de panneau latéral enregistrée par un module principal ou un plugin communautaire " +
 				"(calendrier, plan, panneau de tags, kanban…). La liste dépend des " +
 				"plugins activés.",
 			pickPlaceholder: "Choisir une vue…",
@@ -3242,14 +3242,14 @@ export const fr: Translations = {
 			nightSleepDesc:
 				"Ce que l'horloge a le droit de faire. Une heure creuse la nuit, c'est l'heure, pas " +
 				"de la négligence — une bonne journée reste une bonne journée, et une caresse réveille " +
-				"le compagnon quel que soit ce réglage.",
+				"le compagnon quel que soit ce paramètre.",
 			nightOff: "Rien — seul le coffre compte",
 			nightQuiet: "Un compagnon qui s'ennuie ou content dort à la place",
 			nightAlways: "Toujours endormi la nuit",
 			nightWindow: "La nuit va de",
 			nightWindowDesc: "Votre heure locale. La plage peut passer minuit.",
 			eyesFollow: "Les yeux suivent le pointeur",
-			eyesFollowDesc: "Un compagnon endormi garde les yeux fermés quel que soit ce réglage.",
+			eyesFollowDesc: "Un compagnon endormi garde les yeux fermés quel que soit ce paramètre.",
 			eyesOff: "Jamais",
 			eyesCard: "Sur sa propre carte",
 			eyesBoard: "N'importe où sur le tableau",
@@ -3261,7 +3261,7 @@ export const fr: Translations = {
 			missing: "Vault Pet n'est pas installé",
 			missingDesc:
 				"Cette carte accueille le plugin communautaire Vault Pet. Installez-le et activez-" +
-				"le, et la carte se remplit d'elle-même — ces réglages sont conservés dans tous les cas.",
+				"le, et la carte se remplit d'elle-même — ces paramètres sont conservés dans tous les cas.",
 			display: "Afficher",
 			displayDesc:
 				"Les deux viennent de Vault Pet : la petite carte qu'il peut insérer dans une note, " +
@@ -3324,54 +3324,54 @@ export const fr: Translations = {
 	// ---- Card bodies (rendered content) --------------------------------
 	cards: {
 		empty: {
-			searchNoQuery: "Définissez une requête dans les réglages de la carte",
+			searchNoQuery: "Définissez une requête dans les paramètres de la carte",
 			searchNoMatches: "Aucun résultat",
-			embedPickFile: "Choisissez un fichier à intégrer dans les réglages",
-			slideshowEmpty: "Ajoutez des images dans les réglages de la carte",
+			embedPickFile: "Choisissez un fichier à intégrer dans les paramètres",
+			slideshowEmpty: "Ajoutez des images dans les paramètres de la carte",
 			slideshowFolderEmpty: "Aucune image dans ce dossier",
-			embedEnableBases: "Activez le plugin natif Bases pour intégrer des fichiers .base",
-			embedEnableCanvas: "Activez le plugin natif Canvas pour intégrer des canvas",
+			embedEnableBases: "Activez le module principal Bases pour intégrer des fichiers .base",
+			embedEnableCanvas: "Activez le module principal Canvas pour intégrer des canvas",
 			embedInstallExcalidraw: "Installez le plugin Excalidraw pour intégrer des dessins",
-			dailyEnable: "Activez le plugin natif Notes quotidiennes",
+			dailyEnable: "Activez le module principal Notes quotidiennes",
 			periodicInstall: "Installez le plugin Periodic Notes",
 			journalsInstall: "Installez le plugin Journals",
 			scheduleNoSources:
-				"Activez le plugin natif Notes quotidiennes, ou abonnez-vous à un calendrier dans les réglages de cette carte",
-			webNoUrl: "Définissez une URL dans les réglages",
-			bookmarksEnable: "Activez le plugin natif Signets",
+				"Activez le module principal Notes quotidiennes, ou abonnez-vous à un calendrier dans les paramètres de cette carte",
+			webNoUrl: "Définissez une URL dans les paramètres",
+			bookmarksEnable: "Activez le module principal Signets",
 			bookmarksEmpty: "Pas encore de signets",
-			favoritesEmpty: "Ajoutez des favoris dans les réglages",
+			favoritesEmpty: "Ajoutez des favoris dans les paramètres",
 			recentEmpty: "Aucun fichier récent",
 			folderEmpty: "Ce dossier est vide",
 			folderMissing: (path: string) =>
-				path ? `Aucun dossier à « ${path} »` : "Choisissez un dossier dans les réglages de la carte",
-			linksEmpty: "Ajoutez des liens dans les réglages",
-			commandsEmpty: "Ajoutez des commandes dans les réglages de la carte",
+				path ? `Aucun dossier à « ${path} »` : "Choisissez un dossier dans les paramètres de la carte",
+			linksEmpty: "Ajoutez des liens dans les paramètres",
+			commandsEmpty: "Ajoutez des commandes dans les paramètres de la carte",
 			templaterEnable: "Activez le plugin Templater pour créer des notes depuis des modèles",
-			templaterEmpty: "Ajoutez un modèle dans les réglages de la carte",
+			templaterEmpty: "Ajoutez un modèle dans les paramètres de la carte",
 			tasksEnable:
 				"Activez le plugin TaskNotes, ou passez la source sur les cases à cocher",
 			tasksEmpty: "Aucune tâche ouverte",
 			tasksNoMatch: "Aucune tâche ne correspond au filtre",
 			kanbanNoBoard:
-				"Aucun tableau Kanban trouvé — choisissez une note de tableau dans les réglages de la carte, ou créez-en une avec le plugin Kanban",
+				"Aucun Kanban trouvé — choisissez une note Kanban dans les paramètres de la carte, ou créez-en une avec le plugin Kanban",
 			dataviewEnable: "Activez le plugin Dataview pour exécuter des requêtes",
-			dataviewNoQuery: "Définissez une requête Dataview dans les réglages de la carte",
+			dataviewNoQuery: "Définissez une requête Dataview dans les paramètres de la carte",
 			datacoreEnable: "Activez le plugin Datacore pour exécuter des requêtes",
-			datacoreNoQuery: "Définissez une requête Datacore dans les réglages de la carte",
+			datacoreNoQuery: "Définissez une requête Datacore dans les paramètres de la carte",
 			datacoreBadQuery: "Datacore n'a pas pu lire cette requête",
 			datacoreOneQuery:
 				"Une carte exécute une seule requête — celle-ci semble en contenir plusieurs. Gardez seulement celle que vous voulez, sans commentaire après.",
 			datacoreFailed: "Datacore n'a pas pu exécuter cette carte",
 			gitEnable: "Activez le plugin Git pour gérer le dépôt de votre coffre",
 			gitNotReady: "Aucun dépôt ouvert — configurez-en un dans le plugin Git",
-			rssNoSources: "Ajoutez un flux dans les réglages de la carte",
-			weatherNoLocation: "Choisissez un lieu dans les réglages de la carte",
-			marketNoSymbols: "Ajoutez une action, un fonds, une devise ou une crypto dans les réglages de la carte",
+			rssNoSources: "Ajoutez un flux dans les paramètres de la carte",
+			weatherNoLocation: "Choisissez un lieu dans les paramètres de la carte",
+			marketNoSymbols: "Ajoutez une action, un fonds, une devise ou une crypto dans les paramètres de la carte",
 			renderFailed: "Cette carte n'a pas pu être affichée — voir la console pour les détails",
-			leafPickView: "Choisissez une vue de plugin dans les réglages de la carte",
-			boardPickView: "Choisissez une vue pour ce tableau dans ses réglages",
-			boardNeedsFile: "Choisissez un fichier pour ce tableau dans ses réglages",
+			leafPickView: "Choisissez une vue de plugin dans les paramètres de la carte",
+			boardPickView: "Choisissez une vue pour ce tableau dans ses paramètres",
+			boardNeedsFile: "Choisissez un fichier pour ce tableau dans ses paramètres",
 			leafViewMissing:
 				"Cette vue n'est pas disponible — activez le plugin qui la fournit",
 			vaultPetInstall: "Installez le plugin Vault Pet pour avoir un compagnon ici",
@@ -3379,11 +3379,11 @@ export const fr: Translations = {
 				"La maison de Vault Pet n'est pas disponible — activez le plugin, ou mettez-le à jour",
 			operonEnable: "Activez le plugin Operon pour afficher ses tâches",
 			operonDisabled:
-				"L'intégration Operon est désactivée — activez-la dans Réglages → Hearth → Intégrations",
+				"L'intégration Operon est désactivée — activez-la dans Paramètres → Hearth → Intégrations",
 			operonUnsupported:
 				"L'API développeur d'Operon est réservée à l'ordinateur et nécessite Obsidian 1.12.2 ou plus récent",
 			operonPending:
-				"Approuvez Hearth dans Réglages → Operon → Core → General → Developer API Integrations",
+				"Approuvez Hearth dans Paramètres → Operon → Core → General → Developer API Integrations",
 			operonSuspended:
 				"Operon a suspendu l'accès de Hearth — vérifiez-le dans les Developer API Integrations d'Operon",
 			operonRevoked:
@@ -3392,7 +3392,7 @@ export const fr: Translations = {
 			operonError: "Operon a refusé la connexion",
 			operonNoTasks: "Aucune tâche Operon ne correspond",
 			operonNoAgenda: "Rien de prévu sur cette période",
-			operonNoColumns: "Aucun statut Operon à afficher — choisissez un pipeline dans les réglages de la carte",
+			operonNoColumns: "Aucun statut Operon à afficher — choisissez un pipeline dans les paramètres de la carte",
 		},
 		folder: {
 			browse: "Parcourir ce dossier",
@@ -3550,7 +3550,7 @@ export const fr: Translations = {
 			source: "Source",
 			asOf: "Au",
 			totalValue: "Valeur totale",
-			noHoldings: "Indiquez combien d'unités vous détenez dans les réglages de la carte",
+			noHoldings: "Indiquez combien d'unités vous détenez dans les paramètres de la carte",
 			today: "Aujourd'hui",
 			totalGain: "Total",
 			notConverted: (n: number) =>
@@ -3708,7 +3708,7 @@ export const fr: Translations = {
 			error: "Impossible de charger les tickets Jira",
 			empty: "Aucun ticket ne correspond à ces filtres",
 			disabled: "Jira est désactivé (appels externes désactivés)",
-			notConfigured: "Configurez un hôte Jira, un jeton et un filtre enregistré dans les réglages de la carte",
+			notConfigured: "Configurez un hôte Jira, un jeton et un filtre enregistré dans les paramètres de la carte",
 		},
 		git: {
 			sections: {
@@ -3725,7 +3725,7 @@ export const fr: Translations = {
 				fetch: "Fetch",
 				stageAll: "Tout indexer",
 				unstageAll: "Tout désindexer",
-				discardAll: "Annuler toutes les modifications",
+				discardAll: "Abandonner toutes les modifications",
 				switchBranch: "Changer de branche",
 				sourceControl: "Ouvrir le contrôle de source",
 				history: "Ouvrir l'historique",
@@ -3748,13 +3748,13 @@ export const fr: Translations = {
 			openDiff: "Voir les différences",
 			stageFile: "Indexer",
 			unstageFile: "Désindexer",
-			discardFile: "Annuler les modifications",
-			confirmTitle: "Annuler les modifications ?",
+			discardFile: "Abandonner les modifications",
+			confirmTitle: "Abandonner les modifications ?",
 			confirmDiscard:
 				"Toutes les modifications non commitées du coffre seront perdues. Action irréversible.",
 			confirmDiscardFile: (name: string) =>
 				`Les modifications non commitées de « ${name} » seront perdues. Action irréversible.`,
-			confirmDiscardButton: "Annuler les modifications",
+			confirmDiscardButton: "Abandonner les modifications",
 			unsupported: "Cette version du plugin Git ne le permet pas",
 		},
 		daily: {
@@ -3764,19 +3764,19 @@ export const fr: Translations = {
 		},
 		periodic: {
 			period: {
-				day: "aujourd'hui",
-				week: "cette semaine",
-				month: "ce mois-ci",
-				quarter: "ce trimestre",
-				year: "cette année",
+				day: "du jour",
+				week: "de cette semaine",
+				month: "de ce mois-ci",
+				quarter: "de ce trimestre",
+				year: "de cette année",
 			},
-			noNoteYet: (period: string) => `Pas encore de note pour ${period}`,
-			create: (period: string) => `Créer la note de ${period}`,
-			open: (period: string) => `Ouvrir la note de ${period}`,
+			noNoteYet: (period: string) => `Pas encore de note ${period}`,
+			create: (period: string) => `Créer la note ${period}`,
+			open: (period: string) => `Ouvrir la note ${period}`,
 			notEnabled: (granularity: string) =>
 				`Activez les notes « ${granularity} » dans Periodic Notes`,
 			loading: "Recherche de la note du journal…",
-			pickJournal: "Choisissez un journal dans les réglages de cette carte",
+			pickJournal: "Choisissez un journal dans les paramètres de cette carte",
 			noSuchJournal: (journal: string) => `Aucun journal nommé « ${journal} »`,
 			noJournalNoteYet: (journal: string) => `Pas encore de note actuelle dans ${journal}`,
 			createJournalNote: "La créer",
@@ -3851,8 +3851,8 @@ export const fr: Translations = {
 		},
 		bookmarks: {
 			untitled: "Sans titre",
-			needsSearch: "Activez le plugin natif Recherche pour ouvrir une recherche enregistrée",
-			needsGraph: "Activez le plugin natif Vue graphique pour ouvrir un graphe enregistré",
+			needsSearch: "Activez le module principal Recherche pour ouvrir une recherche enregistrée",
+			needsGraph: "Activez le module principal Vue graphique pour ouvrir un graphe enregistré",
 		},
 		tasks: {
 			createNewTask: "Créer une tâche",
@@ -4091,7 +4091,7 @@ export const fr: Translations = {
 		tension: "Tension mondiale",
 		git: "Git",
 		"operon-tasks": "Tâches Operon",
-		"operon-board": "Tableau Operon",
+		"operon-board": "Kanban Operon",
 		"operon-agenda": "Agenda Operon",
 		"operon-timer": "Minuteur Operon",
 		leaf: "Vue de plugin (bêta)",
@@ -4217,7 +4217,7 @@ export const fr: Translations = {
 				"Identifiants — un jeton Jira, et tout ce qu'une carte peut contenir d'autre",
 			],
 			publishKeeps:
-				"Conservé, car c'est ce qui fait le tableau : la disposition, le style, les couleurs, les images, les réglages des cartes, les recherches et requêtes, et toute page ou flux public qu'il affiche. Ouvrez les détails ci-dessous pour voir les valeurs exactes et choisir ce qui part.",
+				"Conservé, car c'est ce qui fait le tableau : la disposition, le style, les couleurs, les images, les paramètres des cartes, les recherches et requêtes, et toute page ou flux public qu'il affiche. Ouvrez les détails ci-dessous pour voir les valeurs exactes et choisir ce qui part.",
 			intro:
 				"Enregistre ce tableau de bord dans un fichier. Toute son apparence l'accompagne, il s'affiche donc de la même façon dans un autre coffre.",
 			name: "Nom",
@@ -4310,9 +4310,9 @@ export const fr: Translations = {
 
 			// ---- The details disclosure ----
 			detailsSummary: "Voir et régler exactement ce qui part",
-			flatten: "Copier les réglages d'apparence de ce coffre dans le tableau",
+			flatten: "Copier les paramètres d'apparence de ce coffre dans le tableau",
 			flattenDesc:
-				"L'essentiel de l'apparence d'un tableau — la grille, l'espacement, les surfaces des cartes, l'arrière-plan, l'en-tête — est un réglage global du coffre, et le tableau ne stocke que ce qu'il remplace. Ceci écrit les valeurs effectives dans le tableau lui-même, pour qu'il ait la même apparence dans le coffre de quelqu'un d'autre au lieu de prendre ses réglages. Désactivé, le tableau n'emporte que ses propres remplacements et s'adapte à son lieu d'arrivée.",
+				"L'essentiel de l'apparence d'un tableau — la grille, l'espacement, les surfaces des cartes, l'arrière-plan, l'en-tête — est un paramètre global du coffre, et le tableau ne stocke que ce qu'il remplace. Ceci écrit les valeurs effectives dans le tableau lui-même, pour qu'il ait la même apparence dans le coffre de quelqu'un d'autre au lieu de prendre ses paramètres. Désactivé, le tableau n'emporte que ses propres remplacements et s'adapte à son lieu d'arrivée.",
 			groupPinned: "Toujours retiré lors d'une publication.",
 			stripIntro:
 				"Chaque groupe ci-dessous est retiré du fichier. Ce qui sera retiré est listé en dessous — c'est la liste réelle, lue depuis ce tableau.",
@@ -4354,7 +4354,7 @@ export const fr: Translations = {
 			kinds: {
 				dashboard: "Un tableau de bord",
 				layout: "Une disposition de tableaux",
-				settings: "Une sauvegarde complète des réglages",
+				settings: "Une sauvegarde complète des paramètres",
 			},
 			by: (author: string) => `par ${author}`,
 			signatureInvalid:
@@ -4369,13 +4369,13 @@ export const fr: Translations = {
 				n <= 1 ? `Pointe vers ${n} chemin d'un coffre` : `Pointe vers ${n} chemins d'un coffre`,
 			needsPlugins: (plugins: string) => `Nécessite ces plugins : ${plugins}`,
 			mode: "Comment l'importer",
-			modeDesc: "Ajouter ne touche à aucun de vos réglages.",
+			modeDesc: "Ajouter ne touche à aucun de vos paramètres.",
 			modeAdd: "Ajouter comme nouveau tableau",
 			modeAddBoards: "Ajouter ses tableaux aux miens",
 			modeReplaceBoard: (name: string) => `Mettre à jour « ${name} » sur place`,
-			modeReplaceAll: "Remplacer tous mes réglages",
+			modeReplaceAll: "Remplacer tous mes paramètres",
 			replaceAllWarning:
-				"Cela remplace vos tableaux et tous les réglages de Hearth par ceux de ce fichier. Action irréversible.",
+				"Cela remplace vos tableaux et tous les paramètres de Hearth par ceux de ce fichier. Action irréversible.",
 			heads: "Bon à savoir",
 			missingPlugins: (plugins: string) =>
 				`Non installés ou non activés ici : ${plugins}. Ces cartes seront vides tant qu'ils ne le seront pas.`,
@@ -4391,7 +4391,7 @@ export const fr: Translations = {
 			addedOne: (name: string) => `« ${name} » ajouté.`,
 			addedMany: (n: number) => `${n} tableaux ajoutés.`,
 			replacedOne: (name: string) => `« ${name} » mis à jour.`,
-			restored: "Réglages restaurés.",
+			restored: "Paramètres restaurés.",
 			assetsWritten: (n: number) =>
 				n <= 1 ? `${n} image enregistrée dans votre coffre.` : `${n} images enregistrées dans votre coffre.`,
 			warnMissingPaths: (n: number) =>
@@ -4399,7 +4399,7 @@ export const fr: Translations = {
 			warnMissingPlugins: (n: number) =>
 				`${n} plugin${n <= 1 ? " requis n'est" : "s requis ne sont"} pas activé${n <= 1 ? "" : "s"}.`,
 			warnTaskFields:
-				"Ses cartes de tâches utilisent des champs personnalisés — activez la personnalisation des champs de tâche dans Réglages → Intégrations pour les voir.",
+				"Ses cartes de tâches utilisent des champs personnalisés — activez la personnalisation des champs de tâche dans Paramètres → Intégrations pour les voir.",
 			warnUnknownCards: "Certaines cartes nécessitent une version plus récente de Hearth et ont été exclues.",
 			warnAssets: "Certaines de ses images manquaient dans le fichier.",
 		},
@@ -4472,7 +4472,7 @@ export const fr: Translations = {
 			requires: "Ce qu'il nécessite",
 			requiresPlugins: "Plugins",
 			requiresViews: "Vues hébergées",
-			requiresSettings: "Réglages",
+			requiresSettings: "Paramètres",
 			nothingRequired: "Rien d'autre que Hearth.",
 			size: (kb: number) => `${kb} Ko`,
 			remote: (n: number) =>
@@ -4537,7 +4537,7 @@ export const fr: Translations = {
 			host: "Adresse de la galerie",
 			hostDesc:
 				"La galerie que Hearth parcourt et où il publie. Rien n'est récupéré avant que vous l'ouvriez et rien n'est envoyé avant que vous publiiez. Videz ce champ pour désactiver complètement la galerie — elle reste désactivée. https uniquement (ou http sur localhost, pour une galerie hébergée par vous-même).",
-			hostPlaceholder: "https://galerie.exemple.com",
+			hostPlaceholder: "https://galerie.example.com",
 			hostInvalid: "Hearth ne communiquera pas avec cette adresse. Utilisez https, ou http sur localhost.",
 			hostCleared: "Galerie désactivée.",
 			hostSet: (host: string) => `Galerie définie sur ${host}.`,
@@ -4547,7 +4547,7 @@ export const fr: Translations = {
 		},
 		errors: {
 			noHost:
-				"Aucune galerie n'est configurée. Indiquez une adresse de galerie dans les réglages de Hearth, section Galerie de tableaux.",
+				"Aucune galerie n'est configurée. Indiquez une adresse de galerie dans les paramètres de Hearth, section Galerie de tableaux.",
 			externalCallsOff:
 				"La galerie est un serveur sur internet, et ce coffre a « Désactiver les appels externes » activé. Désactivez-le pour parcourir ou publier.",
 			offline: "Impossible de joindre la galerie. Elle est peut-être hors service, ou cet appareil hors ligne.",
@@ -4573,14 +4573,14 @@ export const fr: Translations = {
 		notAHearthLayout:
 			"Pas une disposition Hearth — aucun tableau \"dashboards\" ou \"cards\" trouvé.",
 		notHearthSettings:
-			"Pas une sauvegarde de réglages Hearth — aucun marqueur \"hearthSettings\" ni disposition trouvé.",
+			"Pas une sauvegarde de paramètres Hearth — aucun marqueur \"hearthSettings\" ni disposition trouvé.",
 	},
 
 	// ---- Terminal mode (src/tui/) -----------------------------------------
 	tui: {
 		boardLabel: "Tableau de bord, mode Terminal",
 		cardMenu: "Menu de la carte",
-		removeCard: "Supprimer la carte",
+		removeCard: "Retirer la carte",
 		resize: "Tirer pour redimensionner",
 		moveUp: "Monter",
 		moveDown: "Descendre",
@@ -4601,11 +4601,11 @@ export const fr: Translations = {
 		menuDetail: "Ouvrir la vue agrandie",
 		menuZoom: "Zoom",
 		menuRefresh: "Actualiser",
-		menuSettings: "Réglages de la carte",
+		menuSettings: "Paramètres de la carte",
 		menuPin: "Épingler sur tous les tableaux",
 		menuUnpin: "Désépingler de tous les tableaux",
 		menuDuplicate: "Dupliquer",
-		menuRemove: "Supprimer la carte",
+		menuRemove: "Retirer la carte",
 		searchLabel: "Recherche :",
 		restingHint: "Tab passe d'une carte à l'autre · ↑↓ à l'intérieur · Entrée ouvre · m menu · F1 aide",
 		cardCount: (n: number) => (n <= 1 ? `${n} carte` : `${n} cartes`),
@@ -4623,7 +4623,7 @@ export const fr: Translations = {
 		},
 		quitTitle: "Quitter le mode Terminal ?",
 		quitMessage:
-			"Hearth revient à son design graphique. Le mode Terminal peut être réactivé dans Réglages → Hearth → Apparence.",
+			"Hearth revient à son design graphique. Le mode Terminal peut être réactivé dans Paramètres → Hearth → Apparence.",
 		quitConfirm: "Quitter le mode Terminal",
 		fn: {
 			help: "Aide",
@@ -4643,7 +4643,7 @@ export const fr: Translations = {
 		cards: {
 			filesFoot: "entrée ouvre · clic droit pour le menu du fichier",
 			launchFoot: "flèches choisissent · entrée exécute",
-			statsEmpty: "Aucune statistique sélectionnée. Choisissez-en dans les réglages de la carte.",
+			statsEmpty: "Aucune statistique sélectionnée. Choisissez-en dans les paramètres de la carte.",
 			heatTotal: (total: string, weeks: number) => `${total} en ${weeks} semaines`,
 			heatFoot: "flèches changent de jour · entrée ouvre sa note quotidienne",
 			heatFootNoDaily: "flèches changent de jour",
@@ -4660,24 +4660,24 @@ export const fr: Translations = {
 			switchView: "Passer à l'autre vue",
 			due: "ÉCH.",
 			task: "TÂCHE",
-			tasksFoot: "espace coche · entrée ouvre · f filtre · s tri · b tableau · + ajoute",
+			tasksFoot: "espace coche · entrée ouvre · f filtre · s tri · b kanban · + ajoute",
 			tasksOpen: (n: number) => (n <= 1 ? `${n} ouverte` : `${n} ouvertes`),
 			tasksNoAdd: "La source de cette carte n'a pas d'ajout rapide. Ajoutez plutôt une case à cocher dans une note.",
 			tasksAddTo: (column: string) => `Nouvelle carte dans ${column}`,
 			columnLeft: "Déplacer la colonne à gauche",
 			columnRight: "Déplacer la colonne à droite",
-			boardNoColumns: "Toutes les colonnes sont masquées. Réaffichez-les dans les réglages de la carte.",
+			boardNoColumns: "Toutes les colonnes sont masquées. Réaffichez-les dans les paramètres de la carte.",
 			boardFoot: "flèches déplacent · maj+flèches déplacent la carte · espace coche · f filtre · b liste",
 			boardHint: (cards: number, columns: number) => `${cards} dans ${columns}`,
 			showList: "Afficher en liste",
-			showBoard: "Afficher en tableau",
+			showBoard: "Afficher en Kanban",
 			calNothing: "Rien de prévu. Entrée ouvre la note quotidienne.",
 			calNothingNoNotes: "Rien de prévu.",
 			calEvents: (n: number) => (n <= 1 ? `${n} événement` : `${n} événements`),
 			calFoot: "flèches changent de jour · pgup/pgdn mois · entrée ouvre · home aujourd'hui",
 			agendaFoot: "flèches choisissent · entrée ouvre",
 			schedFoot: "[ ] ou pgup/pgdn avancent · v vue · flèches changent de jour · entrée ouvre · home aujourd'hui",
-			allDayShort: "journée",
+			allDayShort: "tte j.",
 			weatherFoot: "flèches choisissent un jour · entrée l'affiche heure par heure",
 			weatherCardFoot: "entrée ouvre les prévisions complètes",
 			tensionFoot: "entrée ouvre l'indice sur Kagi News",
@@ -4727,7 +4727,7 @@ export const fr: Translations = {
 			fontSizeDesc: "La taille du texte du terminal, en pixels. Chaque carte garde sa place dans la grille.",
 			overrides: "Ce que le mode Terminal remplace",
 			overridesDesc:
-				"Le fond d'écran, le verre givré, les surfaces des cartes et les animations ne sont pas dessinés, et le choix Classique ou Expressif de chaque tableau et carte est mis de côté jusqu'à la désactivation du mode Terminal. Les cartes qui sont des images ou la vue d'un autre plugin sont affichées telles quelles, dans un cadre terminal. Les réglages sans effet pendant ce temps — l'onglet Style d'une carte, le fond d'écran, les surfaces des cartes, l'icône et les tailles de l'en-tête — sont masqués, sauf si un tableau de plugin, que le mode Terminal laisse tel quel, les utilise encore.",
+				"Le fond d'écran, le verre givré, les surfaces des cartes et les animations ne sont pas dessinés, et le choix Classique ou Expressif de chaque tableau et carte est mis de côté jusqu'à la désactivation du mode Terminal. Les cartes qui sont des images ou la vue d'un autre plugin sont affichées telles quelles, dans un cadre terminal. Les paramètres sans effet pendant ce temps — l'onglet Style d'une carte, le fond d'écran, les surfaces des cartes, l'icône et les tailles de l'en-tête — sont masqués, sauf si un tableau de plugin, que le mode Terminal laisse tel quel, les utilise encore.",
 		},
 		helpTitle: "Touches",
 		help: {
@@ -4735,11 +4735,11 @@ export const fr: Translations = {
 			moveSelection: "Se déplacer dans la carte active",
 			moveSideways: "Se déplacer dans la carte, ou vers la carte voisine",
 			open: "Ouvrir l'élément sélectionné",
-			toggle: "Cocher une tâche, replier un dossier, déplacer une carte de tableau",
+			toggle: "Cocher une tâche, replier un dossier, déplacer une carte Kanban",
 			menu: "Menu de la carte (aussi clic droit, ou le ≡ du cadre)",
 			zoom: "Agrandir la carte en plein écran",
 			detail: "Ouvrir la vue agrandie de la carte",
-			settings: "Réglages de la carte",
+			settings: "Paramètres de la carte",
 			escape: "Quitter un champ, ou retirer le focus",
 			search: "Rechercher dans le coffre",
 			boards: "Changer de tableau",
@@ -4749,7 +4749,7 @@ export const fr: Translations = {
 			filter: "Filtrer la carte active",
 			sort: "Trier la carte active",
 			refresh: "Actualiser toutes les cartes",
-			board: "Réglages du tableau",
+			board: "Paramètres du tableau",
 			scheme: "Palette suivante",
 			help: "Cette liste",
 			quit: "Quitter le mode Terminal",
