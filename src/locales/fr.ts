@@ -956,13 +956,13 @@ export const fr: Translations = {
 			searchEngine: "Moteur de recherche",
 			searchEngineDesc:
 				"Le moteur qui alimente la barre de recherche. Omnisearch nécessite que le " +
-				"plugin communautaire Omnisearch soit installé et activé.",
+				"module complémentaire Omnisearch soit installé et activé.",
 			searchEngineBuiltin: "Hearth (intégré)",
 			searchEngineOmnisearch: "Omnisearch",
 			omnisearchMissing:
 				"Omnisearch n'est pas installé ou activé. Installez-le et activez-le, " +
 				"puis sélectionnez-le à nouveau.",
-			omnisearchInstallLink: "Ouvrir Omnisearch dans les plugins communautaires",
+			omnisearchInstallLink: "Ouvrir Omnisearch dans les modules complémentaires",
 			showNewNoteButton: "Afficher le bouton « Nouvelle note »",
 			showNewNoteButtonDesc: "Afficher le bouton d'action à côté du champ de recherche.",
 			newNoteButtonMode: "Bouton de la barre de recherche",
@@ -1269,7 +1269,7 @@ export const fr: Translations = {
 				"La plupart des intégrations ne demandent aucune configuration — les autres indiquent où se " +
 				"trouvent leurs paramètres.",
 			groups: {
-				plugin: "Plugins communautaires",
+				plugin: "Modules complémentaires",
 				pluginDesc: "Hearth les détecte automatiquement dès qu'ils sont activés.",
 				core: "Modules principaux d'Obsidian",
 				coreDesc:
@@ -1302,7 +1302,7 @@ export const fr: Translations = {
 				none: "Rien à configurer.",
 			},
 			install: "Installer",
-			installTooltip: "Ouvrir ce plugin dans le navigateur de plugins communautaires d'Obsidian.",
+			installTooltip: "Ouvrir ce plugin dans le catalogue des modules complémentaires d'Obsidian.",
 			goToSection: "Afficher",
 			goToTab: "Ouvrir",
 			items: {
@@ -1569,7 +1569,7 @@ export const fr: Translations = {
 			statusOff: "L'intégration est désactivée, Hearth ne lit donc rien depuis Operon.",
 			statusError: "Operon a refusé la connexion.",
 			detail: "Operon a indiqué",
-			install: "Ouvrir Operon dans les plugins communautaires",
+			install: "Ouvrir Operon dans les modules complémentaires",
 			writes: "Autoriser les modifications",
 			writesDesc:
 				"Permet à la carte Kanban de changer le statut d'une tâche par glisser-déposer, et " +
@@ -1949,7 +1949,7 @@ export const fr: Translations = {
 				"du plugin Periodic Notes, et si elle manque, elle est créée par Periodic Notes " +
 				"lui-même. La carte se met à jour en direct pendant l'édition.",
 			missingDesc:
-				"Cette carte nécessite le plugin communautaire Periodic Notes. Installez-le et activez-" +
+				"Cette carte nécessite le module complémentaire Periodic Notes. Installez-le et activez-" +
 				"le, puis activez le type de note souhaité ici.",
 			journalsInfo: "Journals",
 			journalsInfoDesc:
@@ -1957,7 +1957,7 @@ export const fr: Translations = {
 				"du journal, et si elle manque, elle est créée par Journals lui-même — " +
 				"questions comprises. La carte se met à jour en direct pendant l'édition.",
 			journalsMissingDesc:
-				"Cette carte nécessite le plugin communautaire Journals. Installez-le et activez-le, " +
+				"Cette carte nécessite le module complémentaire Journals. Installez-le et activez-le, " +
 				"puis créez un journal à suivre ici.",
 		},
 		web: {
@@ -2810,7 +2810,7 @@ export const fr: Translations = {
 		git: {
 			missing: "Le plugin Git n'est pas activé",
 			missingDesc:
-				"Cette carte est une fenêtre sur le plugin communautaire Git — installez-le et activez-" +
+				"Cette carte est une fenêtre sur le module complémentaire Git — installez-le et activez-" +
 				"le, et pointez-le vers un dépôt, pour que la carte affiche quelque chose.",
 			sections: "Sections",
 			actions: "Boutons",
@@ -3169,7 +3169,7 @@ export const fr: Translations = {
 		leaf: {
 			view: "Vue à héberger",
 			viewDesc:
-				"Une vue de panneau latéral enregistrée par un module principal ou un plugin communautaire " +
+				"Une vue de panneau latéral enregistrée par un module principal ou un module complémentaire " +
 				"(calendrier, plan, panneau de tags, kanban…). La liste dépend des " +
 				"plugins activés.",
 			pickPlaceholder: "Choisir une vue…",
@@ -3260,7 +3260,7 @@ export const fr: Translations = {
 		vaultPet: {
 			missing: "Vault Pet n'est pas installé",
 			missingDesc:
-				"Cette carte accueille le plugin communautaire Vault Pet. Installez-le et activez-" +
+				"Cette carte accueille le module complémentaire Vault Pet. Installez-le et activez-" +
 				"le, et la carte se remplit d'elle-même — ces paramètres sont conservés dans tous les cas.",
 			display: "Afficher",
 			displayDesc:
